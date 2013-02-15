@@ -18,7 +18,7 @@ public class LetterEntryView {
        this.themeLetter = themeLetter;
     }
 
-    public String getFromLetter() {
+     public String getFromLetter() {
         return fromLetter;
     }
 

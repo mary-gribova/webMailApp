@@ -2,49 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80321b18-37b9-4073-afe4-4acf18000a95" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/LetterEntryView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/LetterTableModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/LettersList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/src/main/resources/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/MailBoxFrame.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_4_0_1_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_4_1_9_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_17_1_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_1_0_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_1_spec_1_0_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/src/main/resources/META-INF/persistence.xml" />
-      <change type="DELETED" beforePath="C:\gitrepos\t-systems\webMailApp\.idea\libraries\Maven__antlr_antlr_2_7_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gitrepos\t-systems\webMailApp\.idea\libraries\Maven__commons_collections_commons_collections_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gitrepos\t-systems\webMailApp\.idea\libraries\Maven__javax_transaction_jta_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gitrepos\t-systems\webMailApp\.idea\libraries\Maven__org_hibernate_hibernate_commons_annotations_3_2_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gitrepos\t-systems\webMailApp\Client\src\main\java\webMailApp\gui\MailBoxFrame.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\.idea\libraries\Maven__org_hibernate_hibernate_core_3_6_3_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_4_1_9_Final.xml" />
-      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\.idea\libraries\Maven__org_hibernate_javax_persistence_hibernate_jpa_2_0_api_1_0_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_0_api_1_0_1_Final.xml" />
-      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\.idea\libraries\Maven__org_slf4j_slf4j_api_1_6_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/Client.iml" afterPath="$PROJECT_DIR$/Client/Client.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/entities/AddressDTO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/CreateTables.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/entities/FolderDTO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/entities/LetterDTO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/entities/UserDTO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/LetterEntryView.java" afterPath="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/LetterEntryView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/Server.iml" afterPath="$PROJECT_DIR$/Server/Server.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/pom.xml" afterPath="$PROJECT_DIR$/Server/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/Server/src/main/resources/META-INF/persistence.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webMailApp.iml" afterPath="$PROJECT_DIR$/webMailApp.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="webMailApp.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360699863948" ignored="false" />
+    <file path="/Dummy.txt" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360850038510" ignored="false" />
     <file path="C:/ProjectTrainings/First/pom.xml" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360570837922" ignored="false" />
     <file path="/pom.xml" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360778645686" ignored="false" />
     <file path="/AutentificationFrame.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360696177160" ignored="false" />
     <file path="/RegistrationFrame.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360701223828" ignored="false" />
     <file path="/MailBoxFrame.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360797803425" ignored="false" />
-    <file path="/fragment.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360792636175" ignored="false" />
-    <file path="/persistence.xml" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360760404068" ignored="false" />
+    <file path="/fragment.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360832428351" ignored="false" />
+    <file path="/persistence.xml" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360917368435" ignored="false" />
     <file path="/LetterEntry.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360782652983" ignored="false" />
     <file path="/LetterEntryRenderer.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360782704419" ignored="false" />
     <file path="/LettersList.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360797593927" ignored="false" />
     <file path="/LetterTableModel.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360797723017" ignored="false" />
-    <file path="/LetterEntryView.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360792623701" ignored="false" />
+    <file path="/LetterEntryView.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360844910099" ignored="false" />
     <file path="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/DelActionListener.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360793159075" ignored="false" />
+    <file path="/UserDTO.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360927144718" ignored="false" />
+    <file path="/LetterDTO.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360929206212" ignored="false" />
+    <file path="/FolderDTO.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360929225953" ignored="false" />
+    <file path="/AddressDTO.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360929246693" ignored="false" />
+    <file path="/hibernate.cfg.xml" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360835450075" ignored="false" />
+    <file path="C:/ProjectTrainings/Test05/src/TestThreads.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360852305402" ignored="false" />
+    <file path="/TestThreads.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360852304118" ignored="false" />
+    <file path="C:/ProjectTrainings/Test05/src/threadPool/ThreadPool.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360859144926" ignored="false" />
+    <file path="/ThreadPool.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360859120495" ignored="false" />
+    <file path="C:/ProjectTrainings/Test05/src/threadPool/MyThread.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360859086450" ignored="false" />
+    <file path="/MyThread.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360859086450" ignored="false" />
+    <file path="C:/ProjectTrainings/Test05/src/threadPool/MyThreadFactory.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360858182342" ignored="false" />
+    <file path="C:/ProjectTrainings/Test05/src/threadPool/Main.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360859265263" ignored="false" />
+    <file path="/Main.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360859256600" ignored="false" />
+    <file path="/CreateTables.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360921769496" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +59,12 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DatabaseView">
+    <flatten value="false" />
+    <groupTables value="false" />
+    <sortChildren value="false" />
+  </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -94,6 +99,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -102,43 +108,7 @@
     <favorites_list name="webMailApp" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="MailBoxFrame.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/MailBoxFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="7" selection-start="2323" selection-end="2323" vertical-scroll-proportion="0.55748373">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LettersList.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/LettersList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="36" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="class#368:1015" expanded="false" />
-                <element signature="e#1229#1307#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LetterTableModel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/LetterTableModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#455#465#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -156,22 +126,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Client/pom.xml" />
-        <option value="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/AutentificationFrame.java" />
-        <option value="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/RegistrationFrame.java" />
-        <option value="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/LetterViewRenderer.java" />
-        <option value="$PROJECT_DIR$/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/Server/pom.xml" />
-        <option value="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/LetterEntryRenderer.java" />
-        <option value="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/LetterEntry.java" />
-        <option value="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/LettersList.java" />
-        <option value="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/MailBoxFrame.java" />
-        <option value="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/LetterEntryView.java" />
         <option value="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/LetterTableModel.java" />
         <option value="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/LettersList.java" />
         <option value="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/LetterTableModel.java" />
         <option value="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/MailBoxFrame.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/webMailApp/dto/UserDTO.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/UserDTO.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/resources/META-INF/hibernate.cfg.xml" />
+        <option value="dbtable:/f58469ef/36707c46-cd8b-4123-b9ef-d5d25310e5e0/mysql..servers" />
+        <option value="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/LetterEntryView.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/entities/CreateTables.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/CreateTables.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/entities/FolderDTO.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/entities/AddressDTO.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/entities/LetterDTO.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/entities/UserDTO.java" />
       </list>
     </option>
   </component>
@@ -203,14 +173,38 @@
           <option name="myItemId" value="" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Server" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Server" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
       </PATH>
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1358" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -289,12 +283,34 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="webMailApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webMailApp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -319,6 +335,18 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webMailApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -343,6 +371,82 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webMailApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webMailApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webMailApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webMailApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webMailApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webMailApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webMailApp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -489,18 +593,23 @@
   <component name="PropertiesComponent">
     <property name="last_directory_selection" value="$PROJECT_DIR$/Server/src/main/java" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="Persistence.ERD.GroupObjects" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="Persistence.ERD.MergeEmbedded" value="false" />
+    <property name="Persistence.ERD.SimpleMode" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="project.propCompiler" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Server/src/main/resources/META-INF/hibernate.cfg.xml" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="Database.TableEditor.Splitter" value="0.9" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="Persistence.ERD.MergeInherited" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
@@ -516,7 +625,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MailBoxFrame">
+  <component name="RunManager" selected="Application.CreateTables">
     <configuration default="false" name="AutentificationFrame" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -578,6 +687,51 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="webMailApp" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="All in Server" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Server" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CreateTables" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="webMailApp.dao.entities.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="webMailApp.dao.CreateTables" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Server" />
       <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -695,6 +849,12 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
     <configuration default="false" name="MailBoxFrame" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -723,17 +883,21 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Application.MailBoxFrame" />
       <item index="1" class="java.lang.String" itemvalue="Application.AutentificationFrame" />
       <item index="2" class="java.lang.String" itemvalue="Application.RegistrationFrame" />
       <item index="3" class="java.lang.String" itemvalue="Application.App" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.All in Server" />
+      <item index="5" class="java.lang.String" itemvalue="Application.CreateTables" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Application.RegistrationFrame" />
-        <item index="1" class="java.lang.String" itemvalue="Application.AutentificationFrame" />
-        <item index="2" class="java.lang.String" itemvalue="Application.App" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.CreateTables" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.All in Server" />
+        <item index="2" class="java.lang.String" itemvalue="Application.RegistrationFrame" />
+        <item index="3" class="java.lang.String" itemvalue="Application.AutentificationFrame" />
+        <item index="4" class="java.lang.String" itemvalue="Application.App" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -756,15 +920,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22198506" sideWeight="0.19308035" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2470651" sideWeight="0.75446427" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1369863" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -775,14 +938,15 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.017123288" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.109848484" sideWeight="0.8339041" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3719317" sideWeight="0.8995536" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31136364" sideWeight="0.8339041" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1660959" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22198506" sideWeight="0.5535714" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24553572" sideWeight="0.9978022" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -847,95 +1011,214 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Client/pom.xml">
+    <entry file="file://$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/LetterEntryView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1314" selection-end="1314" vertical-scroll-proportion="0.8241379">
+        <state line="18" column="34" selection-start="514" selection-end="514" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/RegistrationFrame.java">
+    <entry file="file://$USER_HOME$/Desktop/t-systems лекции/5/jpa/src/main/java/js/jpa/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="71" selection-start="1280" selection-end="1280" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/AutentificationFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="23" selection-start="731" selection-end="876" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="8" selection-start="866" selection-end="866" vertical-scroll-proportion="0.4796748">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="39" selection-start="987" selection-end="1179" vertical-scroll-proportion="0.3089431">
+        <state line="76" column="65" selection-start="2037" selection-end="2037" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="150" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.29142857">
+        <state line="17" column="95" selection-start="1377" selection-end="1377" vertical-scroll-proportion="0.5230461">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/resources/META-INF/MANIFEST.MF">
+    <entry file="file://$PROJECT_DIR$/Server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="67" selection-start="1269" selection-end="1269" vertical-scroll-proportion="0.3984375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/t-systems лекции/5/jpa/src/main/java/js/jpa/pk/relation/WorkGroup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/LetterEntryView.java">
+    <entry file="file://$USER_HOME$/Desktop/t-systems лекции/5/jpa/src/main/java/js/jpa/pk/relation/inheritance/Animal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="35" selection-start="547" selection-end="547" vertical-scroll-proportion="0.7249467">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.8286853">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/LetterTableModel.java">
+    <entry file="file://$USER_HOME$/Desktop/t-systems лекции/5/jpa/src/main/java/js/jpa/pk/relation/inheritance/Bear.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/t-systems лекции/5/jpa/src/main/java/js/jpa/pk/relation/inheritance/Forest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/t-systems лекции/5/jpa/src/main/java/js/jpa/pk/relation/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="33" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/t-systems лекции/5/jpa/src/main/java/js/jpa/pk/relation/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/CreateTables.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="583" selection-end="583" vertical-scroll-proportion="0.5753846">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#455#465#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/LettersList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="36" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="class#368:1015" expanded="false" />
-            <element signature="e#1229#1307#0" expanded="false" />
-          </folding>
-        </state>
+    <entry file="javaeeDummy://JavaeeElement:/f58469ef/server/Server/jpa/JPA/PersistenceModel">
+      <provider selected="true" editor-type-id="com.intellij.jpa.view.editor.PersistenceUnitMappingGraphProvider">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/MailBoxFrame.java">
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/entities/UserDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="7" selection-start="2323" selection-end="2323" vertical-scroll-proportion="0.55748373">
+        <state line="39" column="79" selection-start="997" selection-end="997" vertical-scroll-proportion="0.73846155">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/entities/LetterDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="79" selection-start="1103" selection-end="1103" vertical-scroll-proportion="0.84307694">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/entities/FolderDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="67" selection-start="636" selection-end="636" vertical-scroll-proportion="0.63384616">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/entities/AddressDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="84" selection-start="1014" selection-end="1014" vertical-scroll-proportion="0.55538464">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>newModule:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>JPA</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>Android 4.0.3 Platform</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>JPA|webMailApp</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
 
