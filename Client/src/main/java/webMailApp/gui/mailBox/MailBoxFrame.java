@@ -85,11 +85,6 @@ public class MailBoxFrame extends JFrame {
      actionPanel.add(scrollPane);
    }
 
-    public static void main(String[] args) {
-        MailBoxFrame mailBoxFrame = new MailBoxFrame();
-        mailBoxFrame.setVisible(true);
-    }
-
     public class DelActionListener implements ActionListener {
 
         @Override

@@ -1,8 +1,5 @@
 package webMailApp.dao.entities;
 
-import javassist.bytecode.analysis.Analyzer;
-import org.hibernate.annotations.Type;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -16,14 +13,14 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "Letter")
-public class LetterDTO implements Serializable {
+public class LetterEntity implements Serializable {
 
     @Id
     @GeneratedValue
     private long letterID;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    private AddressDTO letterFrom;
+    private AddressEntity letterFrom;
 
 
     @Column(name = "letterTo")
@@ -41,12 +38,12 @@ public class LetterDTO implements Serializable {
     private String letterBody;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    private FolderDTO letterFolder;
+    private FolderEntity letterFolder;
 
-    public LetterDTO() {
+    public LetterEntity() {
     }
 
-    public LetterDTO(AddressDTO letterFrom, String letterTo, Date letterDate) {
+    public LetterEntity(AddressEntity letterFrom, String letterTo, Date letterDate) {
         this.letterFrom = letterFrom;
         this.letterTo = letterTo;
         this.letterDate = letterDate;

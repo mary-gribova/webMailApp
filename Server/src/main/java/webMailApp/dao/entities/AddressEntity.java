@@ -15,7 +15,7 @@ import java.util.List;
 
 @Entity
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = {"addressName"}), name = "Address")
-public class AddressDTO implements Serializable {
+public class AddressEntity implements Serializable{
 
     @Id
     @GeneratedValue
@@ -28,18 +28,18 @@ public class AddressDTO implements Serializable {
     private String addressName;
 
     @OneToOne(cascade = CascadeType.ALL)
-    private UserDTO addressUser;
+    private UserEntity addressUser;
 
     @OneToMany(mappedBy = "folderAddress", cascade = CascadeType.ALL)
-    private List<FolderDTO> addressFolder;
+    private List<FolderEntity> addressFolder;
 
     @OneToMany(mappedBy = "letterFrom", cascade = CascadeType.ALL)
-    private List<LetterDTO> addressSendedLetters;
+    private List<LetterEntity> addressSendedLetters;
 
-    public AddressDTO() {
+    public AddressEntity() {
     }
 
-    public AddressDTO(Date addressDate, String addressName, UserDTO addressUser) {
+    public AddressEntity(Date addressDate, String addressName, UserEntity addressUser) {
         this.addressDate = addressDate;
         this.addressName = addressName;
         this.addressUser = addressUser;

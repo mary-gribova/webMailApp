@@ -2,6 +2,8 @@ package webMailApp.gui;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Created with IntelliJ IDEA.
@@ -65,12 +67,17 @@ public class AutentificationFrame extends JFrame {
         gBC.insets = new Insets(5, 5, 5, 5);
         this.add(registerBut, gBC);
 
+        registerBut.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new RegistrationFrame().setVisible(true);
+                getFrame().setVisible(false);
+            }
+        });
     }
 
-
-
-    public static void main(String[] args) {
-        AutentificationFrame autFrame = new AutentificationFrame();
-        autFrame.setVisible(true);
+    private JFrame getFrame() {
+       return this;
     }
+
 }
