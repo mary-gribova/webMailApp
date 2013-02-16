@@ -1,5 +1,12 @@
 package webMailApp.dao.communication;
 
+import webMailApp.dao.entities.AddressEntity;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
 /**
  * Created with IntelliJ IDEA.
  * User: maru
@@ -8,4 +15,6 @@ package webMailApp.dao.communication;
  * To change this template use File | Settings | File Templates.
  */
 public class AddressDAO {
+
+
 }

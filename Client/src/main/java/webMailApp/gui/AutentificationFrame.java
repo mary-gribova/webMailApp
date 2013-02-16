@@ -1,5 +1,7 @@
 package webMailApp.gui;
 
+import webMailApp.gui.mailBox.MailBoxFrame;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -72,6 +74,13 @@ public class AutentificationFrame extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 new RegistrationFrame().setVisible(true);
                 getFrame().setVisible(false);
+            }
+        });
+
+        loginBut.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new MailBoxFrame().setVisible(true);
             }
         });
     }

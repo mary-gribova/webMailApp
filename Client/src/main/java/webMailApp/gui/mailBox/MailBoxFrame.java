@@ -83,6 +83,13 @@ public class MailBoxFrame extends JFrame {
      JScrollPane scrollPane = new JScrollPane(folderTree);
      scrollPane.setPreferredSize(new Dimension(actionPanel.getWidth(), actionPanel.getHeight()));
      actionPanel.add(scrollPane);
+
+     write.addActionListener(new ActionListener() {
+         @Override
+         public void actionPerformed(ActionEvent e) {
+             new SendLetter().setVisible(true);
+         }
+     });
    }
 
     public class DelActionListener implements ActionListener {

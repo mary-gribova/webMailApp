@@ -1,6 +1,7 @@
 package webMailApp.dao.entities;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.UUID;
 
 /**
@@ -12,17 +13,21 @@ import java.util.UUID;
  */
 
 @Entity
+@Table(name = "Session")
 public class SessionEntity {
 
     @Id
-    private UUID sessionID;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private long sessionID;
 
-
-    @Column(name = "sessionUser")
     @OneToOne
     private UserEntity sessionUser;
 
-    public SessionEntity(UUID sessionID, UserEntity sessionUser) {
+    @Column(name = "sessionDate")
+    private Date sessionDate;
+
+    public SessionEntity(long sessionID, UserEntity sessionUser) {
         this.sessionID = sessionID;
         this.sessionUser = sessionUser;
     }

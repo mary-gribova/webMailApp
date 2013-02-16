@@ -9,7 +9,7 @@
     <user-password>dfd8dfc5dfc5dfde</user-password>
     <schema-pattern>server.*</schema-pattern>
     <default-schemas>server.*</default-schemas>
-    <default-dialect>HSQLDB</default-dialect>
+    <default-dialect>MySQL</default-dialect>
     <libraries>
       <library>
         <url>jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.9/mysql-connector-java-5.1.9.jar!/</url>
@@ -17,62 +17,52 @@
     </libraries>
     <schema name="" catalog="server" />
     <table name="address" schema="" catalog="server" type="TABLE">
-      <column name="addressID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" autoIncrement="true" />
+      <column name="id" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" autoIncrement="true" />
       <column name="addressDate" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
       <column name="addressName" sqlType="VARCHAR" length="75" precision="0" nullable="false" jdbcType="12" />
-      <column name="addressUser_userID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
-      <primary-key name="PRIMARY" columns="addressID" />
-      <foreign-key name="FK1ED033D4AF537D4D" columns="addressUser_userID" ref-table="user" ref-schema="" ref-catalog="server" ref-columns="userID" update-rule="3" delete-rule="3" deferrability="2" />
-      <exported-key name="FK7DC2088E44A73814" table="folder" schema="" catalog="server" columns="folderAddress_addressID" />
-      <exported-key name="FK8776104688DF649E" table="letter" schema="" catalog="server" columns="letterFrom_addressID" />
+      <column name="addressUser_id" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="FK1ED033D48D019842" columns="addressUser_id" ref-table="user" ref-schema="" ref-catalog="server" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <exported-key name="FK7DC2088E3169C572" table="folder" schema="" catalog="server" columns="folderAddress_id" />
+      <exported-key name="FK877610465A000A37" table="letter" schema="" catalog="server" columns="letterTo_id" />
+      <exported-key name="FK87761046AEAA4028" table="letter" schema="" catalog="server" columns="letterFrom_id" />
       <index name="addressName" unique="true" columns="addressName" />
     </table>
-    <table name="addressdto" schema="" catalog="server" type="TABLE">
-      <column name="addressID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" />
-      <primary-key name="PRIMARY" columns="addressID" />
-    </table>
     <table name="folder" schema="" catalog="server" type="TABLE">
-      <column name="folderID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" autoIncrement="true" />
-      <column name="folderName" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
-      <column name="folderAddress_addressID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
-      <primary-key name="PRIMARY" columns="folderID" />
-      <foreign-key name="FK7DC2088E44A73814" columns="folderAddress_addressID" ref-table="address" ref-schema="" ref-catalog="server" ref-columns="addressID" update-rule="3" delete-rule="3" deferrability="2" />
-      <exported-key name="FK8776104615DF2A9E" table="letter" schema="" catalog="server" columns="letterFolder_folderID" />
-    </table>
-    <table name="folderdto" schema="" catalog="server" type="TABLE">
-      <column name="folderID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" />
-      <primary-key name="PRIMARY" columns="folderID" />
-    </table>
-    <table name="forest" schema="" catalog="server" type="TABLE">
       <column name="id" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" autoIncrement="true" />
+      <column name="folderName" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="folderAddress_id" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
       <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="FK7DC2088E3169C572" columns="folderAddress_id" ref-table="address" ref-schema="" ref-catalog="server" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
     </table>
     <table name="letter" schema="" catalog="server" type="TABLE">
-      <column name="letterID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" autoIncrement="true" />
+      <column name="id" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" autoIncrement="true" />
       <column name="letterBody" sqlType="LONGTEXT" length="2147483647" precision="0" nullable="true" jdbcType="-1" />
       <column name="letterDate" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" />
       <column name="letterTheme" sqlType="VARCHAR" length="55" precision="0" nullable="true" jdbcType="12" />
-      <column name="letterTo" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
-      <column name="letterFolder_folderID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
-      <column name="letterFrom_addressID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
-      <primary-key name="PRIMARY" columns="letterID" />
-      <foreign-key name="FK8776104688DF649E" columns="letterFrom_addressID" ref-table="address" ref-schema="" ref-catalog="server" ref-columns="addressID" update-rule="3" delete-rule="3" deferrability="2" />
-      <foreign-key name="FK8776104615DF2A9E" columns="letterFolder_folderID" ref-table="folder" ref-schema="" ref-catalog="server" ref-columns="folderID" update-rule="3" delete-rule="3" deferrability="2" />
+      <column name="letterFrom_id" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <column name="letterTo_id" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="FK877610465A000A37" columns="letterTo_id" ref-table="address" ref-schema="" ref-catalog="server" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="FK87761046AEAA4028" columns="letterFrom_id" ref-table="address" ref-schema="" ref-catalog="server" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
     </table>
-    <table name="letterdto" schema="" catalog="server" type="TABLE">
-      <column name="letterID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" />
-      <primary-key name="PRIMARY" columns="letterID" />
+    <table name="session" schema="" catalog="server" type="TABLE">
+      <column name="id" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" autoIncrement="true" />
+      <column name="sessionDate" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93" />
+      <column name="sessionUser_id" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="FKD9891A76DE185760" columns="sessionUser_id" ref-table="user" ref-schema="" ref-catalog="server" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
     </table>
     <table name="user" schema="" catalog="server" type="TABLE">
-      <column name="userID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" />
-      <column name="userAddress" sqlType="TINYBLOB" length="255" precision="0" nullable="true" jdbcType="-2" />
+      <column name="id" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" autoIncrement="true" />
       <column name="userBirthDate" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93" />
-      <column name="userFirstName" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
-      <column name="userLastName" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="userFirstName" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" />
+      <column name="userLastName" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" />
       <column name="userPassword" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
       <column name="userPhone" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
-      <primary-key name="PRIMARY" columns="userID" />
-      <exported-key name="FK1ED033D4AF537D4D" table="address" schema="" catalog="server" columns="addressUser_userID" />
+      <primary-key name="PRIMARY" columns="id" />
+      <exported-key name="FK1ED033D48D019842" table="address" schema="" catalog="server" columns="addressUser_id" />
+      <exported-key name="FKD9891A76DE185760" table="session" schema="" catalog="server" columns="sessionUser_id" />
       <index name="userFirstName" unique="true" columns="userFirstName,userLastName" />
     </table>
   </data-source>

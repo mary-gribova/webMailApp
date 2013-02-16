@@ -8,4 +8,5 @@ package webMailApp.dao.communication;
  * To change this template use File | Settings | File Templates.
  */
 public class LetterDAO {
+
 }

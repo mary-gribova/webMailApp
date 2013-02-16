@@ -16,15 +16,16 @@ import java.util.Date;
 public class LetterEntity implements Serializable {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private long letterID;
 
     @ManyToOne(cascade = CascadeType.ALL)
     private AddressEntity letterFrom;
 
 
-    @Column(name = "letterTo")
-    private String letterTo;
+    @ManyToOne(cascade = CascadeType.ALL)
+    private AddressEntity letterTo;
 
     @Column(name = "letterDate", nullable = false)
     private Date letterDate;
@@ -34,18 +35,57 @@ public class LetterEntity implements Serializable {
 
 
     @Column(name = "letterBody", columnDefinition = "LONGTEXT")
-    @Lob
     private String letterBody;
-
-    @ManyToOne(cascade = CascadeType.ALL)
-    private FolderEntity letterFolder;
 
     public LetterEntity() {
     }
 
-    public LetterEntity(AddressEntity letterFrom, String letterTo, Date letterDate) {
+    public long getLetterID() {
+        return letterID;
+    }
+
+    public AddressEntity getLetterFrom() {
+        return letterFrom;
+    }
+
+    public AddressEntity getLetterTo() {
+        return letterTo;
+    }
+
+    public Date getLetterDate() {
+        return letterDate;
+    }
+
+    public String getLetterTheme() {
+        return letterTheme;
+    }
+
+    public String getLetterBody() {
+        return letterBody;
+    }
+
+    public void setLetterID(long letterID) {
+        this.letterID = letterID;
+    }
+
+    public void setLetterFrom(AddressEntity letterFrom) {
         this.letterFrom = letterFrom;
+    }
+
+    public void setLetterTo(AddressEntity letterTo) {
         this.letterTo = letterTo;
+    }
+
+    public void setLetterDate(Date letterDate) {
         this.letterDate = letterDate;
     }
+
+    public void setLetterTheme(String letterTheme) {
+        this.letterTheme = letterTheme;
+    }
+
+    public void setLetterBody(String letterBody) {
+        this.letterBody = letterBody;
+    }
 }
+

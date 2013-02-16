@@ -14,12 +14,12 @@ import java.util.UUID;
  */
 
 @Entity
-@Table(uniqueConstraints = @UniqueConstraint(columnNames = {"userFirstName", "userLastName" }),
-        name = "User")
+@Table(uniqueConstraints = @UniqueConstraint(columnNames = {"userFirstName", "userLastName" }), name = "User")
 public class UserEntity implements Serializable {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private long userID;
 
      @Column(name = "userFirstName", length = 45)
@@ -46,16 +46,14 @@ public class UserEntity implements Serializable {
     public UserEntity() {
     }
 
-    public UserEntity(String userFirstName, String userLastName, String userPassword, Date userBirthDate, String userPhone, String userAddress) {
+    public UserEntity(String userFirstName, String userLastName, Date userBirthDate, String userPhone, String userPassword) {
         this.userFirstName = userFirstName;
         this.userLastName = userLastName;
         this.userBirthDate = userBirthDate;
         this.userPhone = userPhone;
         this.userPassword = userPassword;
-        this.userAddress = new AddressEntity(new Date(), userAddress, this);
     }
 
-    @Id
     public long getUserID() {
         return userID;
     }

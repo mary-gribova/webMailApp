@@ -1,6 +1,7 @@
 package webMailApp.dao;
 
 import webMailApp.ProjectConstants;
+import webMailApp.dao.dto.LetterDTO;
 import webMailApp.dao.dto.UserDTO;
 
 import java.io.IOException;
@@ -52,5 +53,40 @@ public class UserDAO {
         }
 
         return true;
+    }
+
+
+    public void sendLetter(String letterFrom, String letterTo,
+                           String letterTheme, Date letterDate, String letterBody) {
+
+        try {
+            socket = new Socket(ProjectConstants.SERVER_URL, ProjectConstants.SOCKET);
+            LetterDTO letterDTO = new LetterDTO(letterFrom, letterTo,
+                                          letterTheme, letterDate, letterBody);
+
+            oos = new ObjectOutputStream(socket.getOutputStream());
+            oos.writeObject(letterDTO);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if(socket != null) {
+                try {
+                    socket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if (oos != null) {
+                try {
+                    oos.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+
     }
 }

@@ -17,17 +17,18 @@ import java.util.List;
 public class FolderEntity implements Serializable {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private long folderID;
 
-    @Column(name = "folderName", nullable = false)
+    @Column(name = "folderName")
     private String folderName;
 
     @ManyToOne(cascade = CascadeType.ALL)
     private AddressEntity folderAddress;
 
-    @OneToMany(mappedBy = "letterFolder", cascade = CascadeType.ALL)
-    private List<LetterEntity> folderLetters;
+//    @OneToMany(mappedBy = "letterFolder", cascade = CascadeType.ALL)
+//    private List<LetterEntity> folderLetters;
 
     public FolderEntity() {
     }
@@ -50,9 +51,6 @@ public class FolderEntity implements Serializable {
         return folderAddress;
     }
 
-    public List<LetterEntity> getFolderLetters() {
-        return folderLetters;
-    }
 
     public void setFolderID(long folderID) {
         this.folderID = folderID;
@@ -66,7 +64,5 @@ public class FolderEntity implements Serializable {
         this.folderAddress = folderAddress;
     }
 
-    public void setFolderLetters(List<LetterEntity> folderLetters) {
-        this.folderLetters = folderLetters;
-    }
+
 }
