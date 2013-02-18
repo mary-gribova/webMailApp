@@ -1,5 +1,11 @@
 package webMailApp.services.login;
 
+import webMailApp.dao.communication.UserDAO;
+import webMailApp.dao.dto.LoginDTO;
+import webMailApp.dao.dto.UserDTO;
+
+import java.util.UUID;
+
 /**
  * Created with IntelliJ IDEA.
  * User: maru
@@ -8,7 +14,11 @@ package webMailApp.services.login;
  * To change this template use File | Settings | File Templates.
  */
 public class LoginService {
-    public void loginUser(String login, String password) {
+    public String loginUser(LoginDTO loginDTO) {
+        return new UserDAO().loginUser(loginDTO.getUserAddress(), loginDTO.getUserPassword());
+    }
 
+    public UserDTO findUserBySessionID(String sessionID) {
+        return new UserDAO().getUserBySession(sessionID);
     }
 }

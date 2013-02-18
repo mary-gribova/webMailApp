@@ -14,6 +14,8 @@ import java.util.List;
 
 @Entity
 @Table(name = "Folder")
+@NamedQuery(name = "Folder.findByAddressAndName",
+            query = "select f from FolderEntity f where f.folderAddress.addressName = :addressName and f.folderName = :folderName")
 public class FolderEntity implements Serializable {
 
     @Id
@@ -27,8 +29,8 @@ public class FolderEntity implements Serializable {
     @ManyToOne(cascade = CascadeType.ALL)
     private AddressEntity folderAddress;
 
-//    @OneToMany(mappedBy = "letterFolder", cascade = CascadeType.ALL)
-//    private List<LetterEntity> folderLetters;
+    @OneToMany(mappedBy = "letterFolder", cascade = CascadeType.ALL)
+    private List<LetterEntity> folderLetters;
 
     public FolderEntity() {
     }
@@ -64,5 +66,15 @@ public class FolderEntity implements Serializable {
         this.folderAddress = folderAddress;
     }
 
+    public List<LetterEntity> getFolderLetters() {
+        return folderLetters;
+    }
 
+    public void setFolderLetters(List<LetterEntity> folderLetters) {
+        this.folderLetters = folderLetters;
+    }
+
+    public void addLetter(LetterEntity letter) {
+        folderLetters.add(letter);
+    }
 }

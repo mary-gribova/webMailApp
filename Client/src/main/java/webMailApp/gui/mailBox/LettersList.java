@@ -1,7 +1,11 @@
 package webMailApp.gui.mailBox;
 
+import webMailApp.dao.dto.LetterDTO;
+
 import javax.swing.*;
 import java.awt.*;
+import java.util.*;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,9 +16,14 @@ import java.awt.*;
  */
 public class LettersList {
     private JTable table;
+    private List<LetterDTO> letters;
+
+    public LettersList(List<LetterDTO> letters) {
+      this.letters = letters;
+    }
 
     public JTable getTable() {
-        LetterTableModel.initData();
+        LetterTableModel.initData(letters);
         table = new JTable(new LetterTableModel()) {
 //            @Override
 //            public TableCellRenderer getCellRenderer(int row, int column) {

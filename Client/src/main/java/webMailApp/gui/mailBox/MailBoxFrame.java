@@ -1,11 +1,18 @@
 package webMailApp.gui.mailBox;
 
+import webMailApp.dao.UserDAO;
+import webMailApp.dao.dto.FolderDTO;
+import webMailApp.dao.dto.LetterDTO;
+import webMailApp.dao.dto.UserDTO;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.tree.DefaultMutableTreeNode;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.*;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,7 +22,8 @@ import java.awt.event.ActionListener;
  * To change this template use File | Settings | File Templates.
  */
 public class MailBoxFrame extends JFrame {
-    private static String mailAddr = "default@mail.app";
+    private String sessionID;
+    private UserDTO user;
 
     private JPanel actionPanel;
     private JPanel letterPanel;
@@ -27,8 +35,54 @@ public class MailBoxFrame extends JFrame {
     private JButton delLetter;
     private JTable letterList;
 
-    public MailBoxFrame() {
-      super("MyMailBox - " + mailAddr);
+    private List<LetterDTO> lettersData = new ArrayList<LetterDTO>();
+
+    public UserDTO getUserBySession() {
+        return new UserDAO().getUserBySessionID(sessionID);
+    }
+
+    public DefaultMutableTreeNode getAndShowLetters() {
+      List<FolderDTO> folder = new UserDAO().getRecievedLetters(user.getUserAddress());
+
+     DefaultMutableTreeNode root = new DefaultMutableTreeNode("Inbox");
+
+     Iterator folderIterator = folder.iterator();
+     while (folderIterator.hasNext()) {
+        FolderDTO curFolder = (FolderDTO) folderIterator.next();
+
+        if (!curFolder.getFolderName().equals("Inbox")) {
+            DefaultMutableTreeNode someFolder = new DefaultMutableTreeNode(curFolder.getFolderName());
+            root.add(someFolder);
+
+            Iterator curFolderIterator = curFolder.getLetters().iterator();
+
+            while (curFolderIterator.hasNext()) {
+                LetterDTO letter = (LetterDTO) curFolderIterator.next();
+                lettersData.add(letter);
+                someFolder.add(new DefaultMutableTreeNode(letter.getLetterFrom() + "," + letter.getLetterTheme()));
+            }
+        }  else {
+            Iterator curFolderIterator = curFolder.getLetters().iterator();
+
+            while (curFolderIterator.hasNext()) {
+                LetterDTO letter = (LetterDTO) curFolderIterator.next();
+                lettersData.add(letter);
+                root.add(new DefaultMutableTreeNode(letter.getLetterFrom() + "," + letter.getLetterTheme()));
+            }
+        }
+
+     }
+
+     return root;
+
+    }
+
+    public MailBoxFrame(String sessionID) {
+      this.sessionID = sessionID;
+      user = getUserBySession();
+      this.setTitle("MyMailBox - " + user.getUserAddress());
+
+      DefaultMutableTreeNode root = getAndShowLetters();
 
       this.setBounds(100, 100, 800, 600);
       this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -47,7 +101,7 @@ public class MailBoxFrame extends JFrame {
       letterPanel.setBackground(Color.cyan);
 
       //-------------letters list---------------------
-       letterList = new LettersList().getTable();
+       letterList = new LettersList(lettersData).getTable();
        JScrollPane scrollPaneList = new JScrollPane(letterList);
        letterList.setFillsViewportHeight(true);
 
@@ -60,16 +114,6 @@ public class MailBoxFrame extends JFrame {
       letterPanel.add(scrollPaneList);
       this.add(letterPanel, this);
 
-
-     DefaultMutableTreeNode root = new DefaultMutableTreeNode("Inbox");
-     root.add(new DefaultMutableTreeNode("folder1"));
-     DefaultMutableTreeNode folder2 = new DefaultMutableTreeNode("folder2");
-     folder2.add(new DefaultMutableTreeNode("letter"));
-     folder2.add(new DefaultMutableTreeNode("letter"));
-     folder2.add(new DefaultMutableTreeNode("letter"));
-
-     root.add(folder2);
-     root.add(new DefaultMutableTreeNode("folder2"));
      folderTree = new JTree(root);
 
 
@@ -87,7 +131,7 @@ public class MailBoxFrame extends JFrame {
      write.addActionListener(new ActionListener() {
          @Override
          public void actionPerformed(ActionEvent e) {
-             new SendLetter().setVisible(true);
+             new SendLetter(user.getUserAddress()).setVisible(true);
          }
      });
    }
@@ -104,4 +148,6 @@ public class MailBoxFrame extends JFrame {
             }
         }
     }
+
+
 }

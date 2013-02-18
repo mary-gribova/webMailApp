@@ -1,13 +1,16 @@
 package webMailApp.dao.communication;
 
-import webMailApp.dao.entities.AddressEntity;
-import webMailApp.dao.entities.FolderEntity;
-import webMailApp.dao.entities.LetterEntity;
-import webMailApp.dao.entities.UserEntity;
+import webMailApp.dao.dto.FolderDTO;
+import webMailApp.dao.dto.LetterDTO;
+import webMailApp.dao.dto.UserDTO;
+import webMailApp.dao.entities.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
+import java.util.Iterator;
 
 /**
  * Created with IntelliJ IDEA.
@@ -49,7 +52,7 @@ public class UserDAO {
         return true;
     }
 
-    public boolean sendLetter(String letterFrom, String letterTo, String letterTheme,
+    public void sendLetter(String letterFrom, String letterTo, String letterTheme,
                               Date letterDate, String letterBody)
 
     {
@@ -75,19 +78,167 @@ public class UserDAO {
         newLetter.setLetterTo(addressTo);
         newLetter.setLetterFrom(addresFrom);
 
-        try {
-            trx.begin();
-            em.persist(newLetter);
-            trx.commit();
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            if (trx.isActive())
-                trx.rollback();
+        FolderEntity folderEntity;
+
+        TypedQuery<FolderEntity> folderQuery = em.createNamedQuery("Folder.findByAddressAndName", FolderEntity.class);
+        folderQuery.setParameter("addressName", addressTo.getAddressName());
+        folderQuery.setParameter("folderName", "Inbox");
+        List<FolderEntity> folderResult = folderQuery.getResultList();
+
+        if (folderResult.size() == 0) {
+            folderEntity = new FolderEntity();
+            folderEntity.setFolderName("Inbox");
+            folderEntity.setFolderAddress(addressTo);
+            folderEntity.setFolderLetters(new ArrayList<LetterEntity>());
+            folderEntity.addLetter(newLetter);
+            newLetter.setLetterFolder(folderEntity);
+
+            try {
+                trx.begin();
+                em.persist(newLetter);
+                em.persist(folderEntity);
+                trx.commit();
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                if (trx.isActive())
+                    trx.rollback();
+            }
+
+        }  else {
+            folderEntity = folderResult.get(0);
+            folderEntity.addLetter(newLetter);
+
+            try {
+                trx.begin();
+                em.persist(newLetter);
+                em.merge(folderEntity);
+                trx.commit();
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                if (trx.isActive())
+                    trx.rollback();
+            }
         }
-        return true;
+
     }
 
+   public String loginUser(String userAddress, String userPass) {
+       TypedQuery<SessionEntity> query = em.createNamedQuery("Session.findByUserAddress",
+                                                             SessionEntity.class);
+       query.setParameter("userAddress", userAddress);
+       List<SessionEntity> result = query.getResultList();
 
+
+       String sessionNum;
+
+       if (result != null && result.size() != 0 ) {
+          if (result.get(0).getSessionUser().getUserPassword().equals(userPass)) {
+              sessionNum = result.get(0).getSessionNum();
+          } else {
+              sessionNum = "";
+          }
+       } else {
+           SessionEntity sessionEntity = new SessionEntity();
+
+           TypedQuery<UserEntity> queryUser = em.createNamedQuery("User.findByAddressName",
+                   UserEntity.class);
+           queryUser.setParameter("addressName", userAddress);
+           List<UserEntity> users = queryUser.getResultList();
+
+           UserEntity user = users.get(0);
+
+           /*If password is correct*/
+           if (user.getUserPassword().equals(userPass)) {
+               sessionEntity.setSessionUser(user);
+               sessionEntity.setSessionDate(new Date());
+               sessionEntity.setUserAddress(userAddress);
+
+               sessionNum = UUID.randomUUID().toString();
+               sessionEntity.setSessionNum(sessionNum);
+
+               sessionEntity.setSessionUser(user);
+               user.setUserSession(sessionEntity);
+
+               EntityTransaction trx = em.getTransaction();
+
+               try {
+                   trx.begin();
+                   em.persist(sessionEntity);
+                   em.merge(user);
+                   trx.commit();
+               } catch (Exception e) {
+                   e.printStackTrace();
+               } finally {
+                   if (trx.isActive())
+                       trx.rollback();
+               }
+           } else {
+               sessionNum = "";
+           }
+
+       }
+
+       return sessionNum;
+   }
+
+    public UserDTO getUserBySession(String sessionNum) {
+       TypedQuery<UserEntity> query = em.createNamedQuery("User.findUserBySessionID", UserEntity.class);
+       query.setParameter("sessionNum", sessionNum);
+
+       List<UserEntity> result = query.getResultList();
+
+       if (result.size() != 0) {
+           UserEntity userEntity = result.get(0);
+
+           return new UserDTO(userEntity.getUserFirstName(), userEntity.getUserLastName(), userEntity.getUserPassword(),
+                   userEntity.getUserBirthDate(), userEntity.getUserPhone(), userEntity.getUserAddress().getAddressName());
+       } else {
+           return null;
+       }
+
+    }
+
+    public List<FolderDTO> getRecievedLetters(String addressName) {
+        TypedQuery<AddressEntity> query = em.createNamedQuery("Address.findByName", AddressEntity.class);
+        query.setParameter("addressName", addressName);
+        List<AddressEntity> result = query.getResultList();
+        List<FolderDTO> returnedFolders = new ArrayList<FolderDTO>();
+
+        if (result != null && result.size() != 0) {
+            List<FolderEntity> folders = result.get(0).getAddressFolder();
+
+            if (folders != null && folders.size() != 0) {
+                Iterator folderIterator = folders.iterator();
+
+                while (folderIterator.hasNext()) {
+                    FolderEntity curFolder = (FolderEntity) folderIterator.next();
+
+                    List<LetterEntity> curLetters = curFolder.getFolderLetters();
+                    List<LetterDTO> lettersDTO = new ArrayList<LetterDTO>();
+                    Iterator lettersIterator = curLetters.iterator();
+
+                    while (lettersIterator.hasNext()) {
+
+                        LetterEntity letterEntity = (LetterEntity) lettersIterator.next();
+                        LetterDTO letter = new LetterDTO(letterEntity.getLetterFrom().getAddressName(), letterEntity.getLetterTo().getAddressName(),
+                                letterEntity.getLetterTheme(), letterEntity.getLetterDate(), letterEntity.getLetterBody());
+                        lettersDTO.add(letter);
+                    }
+
+                    FolderDTO folderDTO = new FolderDTO(curFolder.getFolderName(), lettersDTO);
+                    returnedFolders.add(folderDTO);
+                }
+            }
+
+        } else {
+          returnedFolders = null;
+        }
+
+
+
+        return returnedFolders;
+    }
 
 }

@@ -143,18 +143,18 @@ public class RegistrationFrame extends JFrame {
                     e1.printStackTrace();
                 }
 
-//                System.out.println("user: "  + userFirstName + ", " + userLastName);
-//                System.out.println("user phone: " + userPhone);
-//                System.out.println("user addr: " + userAddress);
-//                System.out.println("user pass: " + userPass);
-//                System.out.println("user birth: " + userBirthDate.toString());
-
-                UserDAO userDAO = new UserDAO();
-                if (userDAO.addUser(userFirstName, userLastName, userPass, userBirthDate, userPhone, userAddress))
-                    System.out.println("Wuhhuuuuu!!! Success!!!!");
+                if (new UserDAO().addUser(userFirstName, userLastName, userPass,
+                        userBirthDate, userPhone, userAddress)) {
+                    new AutentificationFrame().setVisible(true);
+                    getFrame().setVisible(false);
+                }
 
             }
         });
+    }
+
+    public JFrame getFrame() {
+      return this;
     }
 
     public JTextField getFirstNameText() {

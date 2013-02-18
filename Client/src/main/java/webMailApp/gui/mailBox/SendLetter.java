@@ -28,8 +28,8 @@ public class SendLetter extends JFrame {
   private JPanel fromToPanel;
   private JPanel letterBodyPanel;
 
-  public SendLetter() {
-     super("Send letter");
+  public SendLetter(String letterFrom) {
+      super("Send letter");
       this.setBounds(150, 150, 600, 600);
       this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       this.setResizable(false);
@@ -49,6 +49,8 @@ public class SendLetter extends JFrame {
       fromToPanel.add(letterFromLabel);
 
       letterFromText = new JTextField();
+      letterFromText.setText(letterFrom);
+      letterFromText.setEditable(false);
       fromToPanel.add(letterFromText);
 
       letterToLabel = new JLabel("To: ");
@@ -77,9 +79,6 @@ public class SendLetter extends JFrame {
       sendButton = new JButton("Send");
       this.add(sendButton);
 
-
-
-
       sendButton.addActionListener(new ActionListener() {
           @Override
           public void actionPerformed(ActionEvent e) {
@@ -90,8 +89,14 @@ public class SendLetter extends JFrame {
 
                UserDAO userDAO = new UserDAO();
                userDAO.sendLetter(letterFrom, letterTo, letterTheme, new Date(), letterBody);
+
+               getFrame().setVisible(false);
           }
       });
 
+  }
+
+  private JFrame getFrame() {
+      return this;
   }
 }

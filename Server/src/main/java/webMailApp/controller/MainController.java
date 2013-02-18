@@ -29,7 +29,10 @@ public class MainController {
 
             while(true) {
                 Socket s = socket.accept();
-                new ClientThread(s).start();
+                System.out.println("Server: new connection accepted!!");
+
+                ClientThread th = new ClientThread(s);
+                th.start();
             }
 
         } catch (IOException e) {

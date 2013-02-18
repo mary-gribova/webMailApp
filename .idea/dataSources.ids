@@ -50,6 +50,8 @@
       <column name="id" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" autoIncrement="true" />
       <column name="sessionDate" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93" />
       <column name="sessionUser_id" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <column name="sessionNum" sqlType="BINARY" length="255" precision="0" nullable="true" jdbcType="-2" />
+      <column name="userAddress" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
       <primary-key name="PRIMARY" columns="id" />
       <foreign-key name="FKD9891A76DE185760" columns="sessionUser_id" ref-table="user" ref-schema="" ref-catalog="server" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2" />
     </table>

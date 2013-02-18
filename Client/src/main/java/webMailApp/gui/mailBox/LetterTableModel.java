@@ -1,7 +1,12 @@
 package webMailApp.gui.mailBox;
 
+import webMailApp.dao.dto.LetterDTO;
+
 import javax.swing.table.AbstractTableModel;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Iterator;
 
 /**
  * Created with IntelliJ IDEA.
@@ -16,9 +21,16 @@ public class LetterTableModel extends AbstractTableModel {
     private static ArrayList<Object[]> data = new ArrayList<Object[]>();
 
 
-    public static void initData() {
-        for(int i = 0; i < 5; i++)
-            data.add(new Object[]{false, "", "", ""});
+    public static void initData(List<LetterDTO> letters) {
+        Iterator iterator = letters.iterator();
+        LetterDTO letter;
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+
+        while (iterator.hasNext()) {
+           letter = (LetterDTO) iterator.next();
+           data.add(new Object[]{false, letter.getLetterFrom(), letter.getLetterTheme(),
+                   format.format(letter.getLetterDate())});
+        }
     }
 
     public int getColumnCount() {

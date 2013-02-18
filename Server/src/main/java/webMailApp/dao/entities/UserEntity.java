@@ -15,6 +15,12 @@ import java.util.UUID;
 
 @Entity
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = {"userFirstName", "userLastName" }), name = "User")
+@NamedQueries({
+@NamedQuery(name = "User.findByAddressName",
+            query = "select u from UserEntity u where u.userAddress.addressName = :addressName"),
+@NamedQuery(name = "User.findUserBySessionID",
+            query = "select u from UserEntity u where u.userSession.sessionNum = :sessionNum")
+})
 public class UserEntity implements Serializable {
 
     @Id
@@ -108,5 +114,13 @@ public class UserEntity implements Serializable {
 
     public void setUserPassword(String userPassword) {
         this.userPassword = userPassword;
+    }
+
+    public void setUserSession(SessionEntity userSession) {
+        this.userSession = userSession;
+    }
+
+    public SessionEntity getUserSession() {
+        return userSession;
     }
 }

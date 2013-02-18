@@ -15,8 +15,10 @@ import java.util.List;
 
 @Entity
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = {"addressName"}), name = "Address")
+@NamedQueries({
 @NamedQuery(name = "Address.findByName",
-        query = "SELECT a FROM AddressEntity a where a.addressName = :addressName")
+            query = "SELECT a FROM AddressEntity a where a.addressName = :addressName")
+})
 public class AddressEntity implements Serializable{
 
     @Id

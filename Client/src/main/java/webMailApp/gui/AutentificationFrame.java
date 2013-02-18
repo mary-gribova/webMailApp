@@ -1,11 +1,13 @@
 package webMailApp.gui;
 
+import webMailApp.dao.UserDAO;
 import webMailApp.gui.mailBox.MailBoxFrame;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.UUID;
 
 /**
  * Created with IntelliJ IDEA.
@@ -80,7 +82,20 @@ public class AutentificationFrame extends JFrame {
         loginBut.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new MailBoxFrame().setVisible(true);
+
+                String login = loginField.getText().toString();
+                String password = String.valueOf(passField.getPassword());
+
+                String sessionID = new UserDAO().login(login, password);
+
+                if (sessionID != null || !sessionID.equals("")) {
+                    new MailBoxFrame(sessionID).setVisible(true);
+                    getFrame().setVisible(false);
+                }  else {
+                    JOptionPane.showMessageDialog(getFrame(), "Incorrect login/password or you need to register");
+                }
+
+
             }
         });
     }

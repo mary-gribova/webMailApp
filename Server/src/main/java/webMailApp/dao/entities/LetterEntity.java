@@ -37,6 +37,9 @@ public class LetterEntity implements Serializable {
     @Column(name = "letterBody", columnDefinition = "LONGTEXT")
     private String letterBody;
 
+    @ManyToOne
+    private FolderEntity letterFolder;
+
     public LetterEntity() {
     }
 
@@ -86,6 +89,14 @@ public class LetterEntity implements Serializable {
 
     public void setLetterBody(String letterBody) {
         this.letterBody = letterBody;
+    }
+
+    public FolderEntity getLetterFolder() {
+        return letterFolder;
+    }
+
+    public void setLetterFolder(FolderEntity letterFolder) {
+        this.letterFolder = letterFolder;
     }
 }
 
