@@ -88,7 +88,7 @@ public class AutentificationFrame extends JFrame {
 
                 String sessionID = new UserDAO().login(login, password);
 
-                if (sessionID != null || !sessionID.equals("")) {
+                if (sessionID != null && !sessionID.equals("")) {
                     new MailBoxFrame(sessionID).setVisible(true);
                     getFrame().setVisible(false);
                 }  else {

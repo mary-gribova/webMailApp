@@ -19,30 +19,12 @@ public class LettersList {
     private List<LetterDTO> letters;
 
     public LettersList(List<LetterDTO> letters) {
-      this.letters = letters;
+        this.letters = letters;
     }
 
     public JTable getTable() {
-        LetterTableModel.initData(letters);
-        table = new JTable(new LetterTableModel()) {
-//            @Override
-//            public TableCellRenderer getCellRenderer(int row, int column) {
-//                TableCellRenderer myRenderer = new MyRenderer();
-//                if (column == 0)
-//                    return myRenderer;
-//                else  return super.getCellRenderer(row, column);
-//            }
-//
-//            @Override
-//            public Class<?> getColumnClass(int columnIndex) {
-//                if (columnIndex == 0) {
-//                    return Boolean.class;
-//                }
-//
-//                return super.getColumnClass(columnIndex);
-//            }
 
-        };
+        table = new JTable(new LetterTableModel(letters));
 
         table.getColumnModel().getColumn(0).setMaxWidth(30);
         table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -51,17 +33,4 @@ public class LettersList {
         return table;
     }
 
-//    public class MyRenderer extends JCheckBox implements TableCellRenderer {
-//       public MyRenderer() {
-//       }
-//        public Component getTableCellRendererComponent(JTable table, Object value,
-//                                                       boolean isSelected, boolean hasFocus, int row, int column) {
-//            if (isSelected) {
-//                this.setSelected(true);
-//            } else {
-//                this.setSelected(false);
-//            }
-//            return this;
-//        }
-//    }
 }

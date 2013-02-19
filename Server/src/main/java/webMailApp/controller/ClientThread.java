@@ -7,6 +7,7 @@ import webMailApp.dao.dto.LoginDTO;
 import webMailApp.dao.dto.UserDTO;
 import webMailApp.dao.entities.AddressEntity;
 import webMailApp.services.login.LoginService;
+import webMailApp.services.mailing.DelLettersService;
 import webMailApp.services.mailing.FindLetterService;
 import webMailApp.services.mailing.SendLetterService;
 import webMailApp.services.registration.RegistrationService;
@@ -15,6 +16,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Iterator;
 
@@ -62,9 +64,14 @@ public class ClientThread extends Thread {
             /*Sending letter*/
             } else if (ob.toString().equals(ProjectConstants.SEND_LETTER_REQUEST)) {
                 ob = ois.readObject();
+                boolean res = false;
                 if (ob instanceof LetterDTO) {
-                    new SendLetterService().sendLetter((LetterDTO) ob);
+                    res = new SendLetterService().sendLetter((LetterDTO) ob);
                 }
+
+                if (res) {
+                    oos.writeObject("OK");
+                } else oos.writeObject("NO");
             /*Login user*/
             } else if (ob.toString().equals(ProjectConstants.LOGIN_REQUEST)) {
                 ob = ois.readObject();
@@ -102,6 +109,17 @@ public class ClientThread extends Thread {
                 }
 
                 oos.writeObject("end");
+            } else if (ob.toString().equals(ProjectConstants.DEL_LETTERS_REQUEST)) {
+                ArrayList<LetterDTO> letters = new ArrayList<LetterDTO>();
+
+                ob = ois.readObject();
+
+                while (ob instanceof LetterDTO) {
+                   letters.add((LetterDTO) ob);
+                   ob = ois.readObject();
+                }
+
+                new DelLettersService().delLetters(letters);
             }
         } catch (IOException e1) {
             e1.printStackTrace();

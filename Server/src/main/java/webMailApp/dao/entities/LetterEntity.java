@@ -13,6 +13,13 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "Letter")
+@NamedQueries({
+@NamedQuery(name = "Letter.findLetter",
+            query = "select l from LetterEntity l where l.letterFrom.addressName = :letterFrom and l.letterTo.addressName = :letterTo" +
+                    " and l.letterDate = :letterDate and l.letterTheme = :letterTheme"),
+@NamedQuery(name = "Letter.delete", query = "delete from LetterEntity l where l = :letter")
+
+})
 public class LetterEntity implements Serializable {
 
     @Id
@@ -20,11 +27,11 @@ public class LetterEntity implements Serializable {
     @Column(name = "id")
     private long letterID;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private AddressEntity letterFrom;
 
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private AddressEntity letterTo;
 
     @Column(name = "letterDate", nullable = false)

@@ -11,9 +11,9 @@ import webMailApp.dao.dto.LetterDTO;
  * To change this template use File | Settings | File Templates.
  */
 public class SendLetterService {
-    public void sendLetter(LetterDTO letter) {
+    public boolean sendLetter(LetterDTO letter) {
         UserDAO userDAO = new UserDAO();
-        userDAO.sendLetter(letter.getLetterFrom(), letter.getLetterTo(), letter.getLetterTheme(),
+        return userDAO.sendLetter(letter.getLetterFrom(), letter.getLetterTo(), letter.getLetterTheme(),
                           letter.getLetterDate(), letter.getLetterBody());
     }
 }

@@ -19,17 +19,22 @@ import java.util.Iterator;
 public class LetterTableModel extends AbstractTableModel {
     private static final String[] columnNames = {"", "From", "Theme", "Date"};
     private static ArrayList<Object[]> data = new ArrayList<Object[]>();
+    private List<LetterDTO> lettersCopyList;
 
+    public LetterTableModel(List<LetterDTO> letters) {
+        lettersCopyList = letters;
+        initData(lettersCopyList);
+    }
 
-    public static void initData(List<LetterDTO> letters) {
+    public void initData(List<LetterDTO> letters) {
         Iterator iterator = letters.iterator();
         LetterDTO letter;
         SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
 
         while (iterator.hasNext()) {
-           letter = (LetterDTO) iterator.next();
-           data.add(new Object[]{false, letter.getLetterFrom(), letter.getLetterTheme(),
-                   format.format(letter.getLetterDate())});
+            letter = (LetterDTO) iterator.next();
+            data.add(new Object[]{false, letter.getLetterFrom(), letter.getLetterTheme(),
+                    format.format(letter.getLetterDate())});
         }
     }
 
@@ -60,9 +65,9 @@ public class LetterTableModel extends AbstractTableModel {
 
     public boolean isCellEditable(int rowIndex, int columnIndex) {
         if (columnIndex == 0)
-           return true;
+            return true;
         else
-          return false;
+            return false;
     }
 
 
@@ -71,9 +76,11 @@ public class LetterTableModel extends AbstractTableModel {
         fireTableCellUpdated(row, col);
     }
 
-    public void removeRow(int row) {
-       data.remove(row);
+    public LetterDTO removeRow(int row) {
+        data.remove(row);
+        LetterDTO l = lettersCopyList.remove(row);
         this.fireTableDataChanged();
+        return l;
     }
 
     public void addRow(Object[] row) {
@@ -81,4 +88,7 @@ public class LetterTableModel extends AbstractTableModel {
         this.fireTableDataChanged();
     }
 
+    public List<LetterDTO> getLettersCopyList() {
+        return lettersCopyList;
+    }
 }

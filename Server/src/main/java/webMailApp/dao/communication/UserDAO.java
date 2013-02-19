@@ -11,6 +11,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 import java.util.Iterator;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created with IntelliJ IDEA.
@@ -19,7 +21,9 @@ import java.util.Iterator;
  * Time: 16:16
  * To change this template use File | Settings | File Templates.
  */
+
 public class UserDAO {
+    private Logger log = Logger.getLogger(UserDAO.class.getName());
 
     private static EntityManager em = Persistence.createEntityManagerFactory("server").createEntityManager();
 
@@ -52,7 +56,7 @@ public class UserDAO {
         return true;
     }
 
-    public void sendLetter(String letterFrom, String letterTo, String letterTheme,
+    public boolean sendLetter(String letterFrom, String letterTo, String letterTheme,
                               Date letterDate, String letterBody)
 
     {
@@ -100,6 +104,7 @@ public class UserDAO {
                 trx.commit();
             } catch (Exception e) {
                 e.printStackTrace();
+                return false;
             } finally {
                 if (trx.isActive())
                     trx.rollback();
@@ -108,6 +113,7 @@ public class UserDAO {
         }  else {
             folderEntity = folderResult.get(0);
             folderEntity.addLetter(newLetter);
+            newLetter.setLetterFolder(folderEntity);
 
             try {
                 trx.begin();
@@ -116,11 +122,14 @@ public class UserDAO {
                 trx.commit();
             } catch (Exception e) {
                 e.printStackTrace();
+                return false;
             } finally {
                 if (trx.isActive())
                     trx.rollback();
             }
         }
+
+        return true;
 
     }
 
@@ -146,37 +155,41 @@ public class UserDAO {
                    UserEntity.class);
            queryUser.setParameter("addressName", userAddress);
            List<UserEntity> users = queryUser.getResultList();
+           UserEntity user;
 
-           UserEntity user = users.get(0);
+           if (users != null && users.size() != 0) {
+               user = users.get(0);
+                /*If password is correct*/
+               if (user.getUserPassword().equals(userPass)) {
+                   sessionEntity.setSessionUser(user);
+                   sessionEntity.setSessionDate(new Date());
+                   sessionEntity.setUserAddress(userAddress);
 
-           /*If password is correct*/
-           if (user.getUserPassword().equals(userPass)) {
-               sessionEntity.setSessionUser(user);
-               sessionEntity.setSessionDate(new Date());
-               sessionEntity.setUserAddress(userAddress);
+                   sessionNum = UUID.randomUUID().toString();
+                   sessionEntity.setSessionNum(sessionNum);
 
-               sessionNum = UUID.randomUUID().toString();
-               sessionEntity.setSessionNum(sessionNum);
+                   sessionEntity.setSessionUser(user);
+                   user.setUserSession(sessionEntity);
 
-               sessionEntity.setSessionUser(user);
-               user.setUserSession(sessionEntity);
+                   EntityTransaction trx = em.getTransaction();
 
-               EntityTransaction trx = em.getTransaction();
-
-               try {
-                   trx.begin();
-                   em.persist(sessionEntity);
-                   em.merge(user);
-                   trx.commit();
-               } catch (Exception e) {
-                   e.printStackTrace();
-               } finally {
-                   if (trx.isActive())
-                       trx.rollback();
+                   try {
+                       trx.begin();
+                       em.persist(sessionEntity);
+                       em.merge(user);
+                       trx.commit();
+                   } catch (Exception e) {
+                       e.printStackTrace();
+                   } finally {
+                       if (trx.isActive())
+                           trx.rollback();
+                   }
+               } else {
+                   sessionNum = "";
                }
-           } else {
-               sessionNum = "";
-           }
+           } else sessionNum = "";
+
+
 
        }
 
@@ -241,4 +254,43 @@ public class UserDAO {
         return returnedFolders;
     }
 
+    public void delLetters(List<LetterDTO> letters) {
+         TypedQuery<LetterEntity> query = em.createNamedQuery("Letter.findLetter", LetterEntity.class);
+         ArrayList<LetterEntity> lettersToDel = new ArrayList<LetterEntity>();
+
+         for (LetterDTO l : letters) {
+             query.setParameter("letterDate", l.getLetterDate());
+             query.setParameter("letterFrom", l.getLetterFrom());
+             query.setParameter("letterTo", l.getLetterTo());
+             query.setParameter("letterTheme", l.getLetterTheme());
+
+             List<LetterEntity> result = query.getResultList();
+
+             if (result != null && result.size() != 0) {
+                 lettersToDel.add(result.get(0));
+             }
+         }
+
+        try {
+            for (LetterEntity l : lettersToDel) {
+                EntityTransaction trx = em.getTransaction();
+                trx.begin();
+                em.remove(l);
+                trx.commit();
+                log.info("Commit letters ");
+
+
+            }
+
+
+
+        } catch (Exception e) {
+            log.log(Level.SEVERE, "Exception!", e);
+        } finally {
+//            if (trx.isActive())
+//                trx.rollback();
+        }
+
+
+    }
 }

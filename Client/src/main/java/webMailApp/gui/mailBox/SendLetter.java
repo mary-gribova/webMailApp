@@ -88,9 +88,12 @@ public class SendLetter extends JFrame {
               String letterBody = letterBodyText.getText().toString();
 
                UserDAO userDAO = new UserDAO();
-               userDAO.sendLetter(letterFrom, letterTo, letterTheme, new Date(), letterBody);
+               boolean b = userDAO.sendLetter(letterFrom, letterTo, letterTheme, new Date(), letterBody);
 
-               getFrame().setVisible(false);
+              if (b) {
+                 getFrame().setVisible(false);
+              }
+
           }
       });
 

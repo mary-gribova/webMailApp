@@ -2,6 +2,8 @@ package webMailApp;
 
 import webMailApp.gui.AutentificationFrame;
 
+import java.util.Date;
+
 /**
  * Created with IntelliJ IDEA.
  * User: maru

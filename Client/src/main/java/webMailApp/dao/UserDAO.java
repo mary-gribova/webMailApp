@@ -75,21 +75,37 @@ public class UserDAO {
         return true;
     }
 
-    public void sendLetter(String letterFrom, String letterTo,
+    public boolean sendLetter(String letterFrom, String letterTo,
                            String letterTheme, Date letterDate, String letterBody) {
         ObjectOutputStream oos = null;
+        ObjectInputStream ois = null;
+
+        boolean retState = false;
 
         try {
-           LetterDTO letterDTO = new LetterDTO(letterFrom, letterTo,
+            LetterDTO letterDTO = new LetterDTO(letterFrom, letterTo,
                                           letterTheme, letterDate, letterBody);
 
             oos = new ObjectOutputStream(socket.getOutputStream());
+            ois = new ObjectInputStream(socket.getInputStream());
 
             oos.writeObject(ProjectConstants.SEND_LETTER_REQUEST);
             oos.writeObject(letterDTO);
 
+            String s = (String) ois.readObject();
+
+            if (s.equals("NO")) {
+                retState  = false;
+            } else if (s.equals("OK")) {
+                retState = true;
+            }
+
         } catch (IOException e) {
             e.printStackTrace();
+            return false;
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            return false;
         } finally {
             if(socket != null) {
                 try {
@@ -116,7 +132,7 @@ public class UserDAO {
             }
         }
 
-
+       return retState;
     }
 
     public String login(String userAddress, String password) {
@@ -271,6 +287,49 @@ public class UserDAO {
         }
 
         return folders;
+    }
+
+    public void delLetters(List<LetterDTO> letters) {
+        try {
+            oos = new ObjectOutputStream(socket.getOutputStream());
+            ois = new ObjectInputStream(socket.getInputStream());
+
+            oos.writeObject(ProjectConstants.DEL_LETTERS_REQUEST);
+
+            for (LetterDTO l : letters) {
+                oos.writeObject(l);
+            }
+
+            oos.writeObject("End");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if(socket != null) {
+                try {
+                    socket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if (oos != null) {
+                try {
+                    oos.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if (ois != null) {
+                try {
+                    ois.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
     }
 
 }
