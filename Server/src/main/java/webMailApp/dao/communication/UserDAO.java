@@ -25,7 +25,8 @@ import java.util.logging.Logger;
 public class UserDAO {
     private Logger log = Logger.getLogger(UserDAO.class.getName());
 
-    private static EntityManager em = Persistence.createEntityManagerFactory("server").createEntityManager();
+    private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("server");
+    private static EntityManager em = emf.createEntityManager();
 
     public boolean addUser(String userFirstName, String userLastName, Date userBirthDate,
                            String userPhone, String userPassword, String userAddress) {
@@ -271,26 +272,21 @@ public class UserDAO {
              }
          }
 
-        try {
-            for (LetterEntity l : lettersToDel) {
-                EntityTransaction trx = em.getTransaction();
-                trx.begin();
-                em.remove(l);
-                trx.commit();
-                log.info("Commit letters ");
 
+
+        try {
+            EntityTransaction trx = em.getTransaction();
+            trx.begin();
+            for (LetterEntity l : lettersToDel) {
+                em.createQuery("delete  from LetterEntity l where l = :letter")
+                        .setParameter("letter", l)
+                        .executeUpdate();
 
             }
-
-
-
+            trx.commit();
         } catch (Exception e) {
-            log.log(Level.SEVERE, "Exception!", e);
-        } finally {
-//            if (trx.isActive())
-//                trx.rollback();
+            e.printStackTrace();
         }
-
 
     }
 }
