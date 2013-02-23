@@ -13,7 +13,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class DelLettersService {
-    public void delLetters(List<LetterDTO> letters) {
-        new UserDAO().delLetters(letters);
+    public boolean delLetters(List<LetterDTO> letters) {
+        return new UserDAO().delLetters(letters);
     }
 }

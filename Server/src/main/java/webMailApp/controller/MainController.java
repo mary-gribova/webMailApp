@@ -8,6 +8,7 @@ import webMailApp.services.registration.RegistrationService;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -20,24 +21,29 @@ import java.net.Socket;
  */
 
 public class MainController {
-    private static ServerSocket socket;
+    static ServerSocket serverSocket;
+    static Socket connection;
 
     public static void main(String[] args) {
+
         try {
-            socket = new ServerSocket(ProjectConstants.SOCKET);
-            System.out.println("Server is running!");
-
-            while(true) {
-                Socket s = socket.accept();
-                System.out.println("Server: new connection accepted!!");
-
-                ClientThread th = new ClientThread(s);
-                th.start();
-            }
-
+            serverSocket = new ServerSocket(ProjectConstants.SOCKET);
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        while (true) {
+            try {
+                connection = serverSocket.accept();
+                Runnable runnable = new MyRunnable(connection, new ObjectOutputStream(connection.getOutputStream()),
+                                     new ObjectInputStream(connection.getInputStream()));
+                new Thread(runnable).start();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+
     }
 
 }

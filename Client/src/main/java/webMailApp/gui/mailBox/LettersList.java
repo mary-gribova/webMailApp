@@ -23,13 +23,10 @@ public class LettersList {
     }
 
     public JTable getTable() {
-
         table = new JTable(new LetterTableModel(letters));
-
         table.getColumnModel().getColumn(0).setMaxWidth(30);
         table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         table.setSelectionBackground(Color.green);
-
         return table;
     }
 

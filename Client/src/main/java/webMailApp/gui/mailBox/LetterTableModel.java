@@ -18,24 +18,43 @@ import java.util.Iterator;
 
 public class LetterTableModel extends AbstractTableModel {
     private static final String[] columnNames = {"", "From", "Theme", "Date"};
-    private static ArrayList<Object[]> data = new ArrayList<Object[]>();
-    private List<LetterDTO> lettersCopyList;
+    private ArrayList<Object[]> data = new ArrayList<Object[]>();
+    private List<LetterDTO> lettersCopyList = new ArrayList<LetterDTO>();
 
     public LetterTableModel(List<LetterDTO> letters) {
-        lettersCopyList = letters;
-        initData(lettersCopyList);
-    }
-
-    public void initData(List<LetterDTO> letters) {
         Iterator iterator = letters.iterator();
-        LetterDTO letter;
         SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
 
         while (iterator.hasNext()) {
-            letter = (LetterDTO) iterator.next();
+            LetterDTO letter = (LetterDTO) iterator.next();
             data.add(new Object[]{false, letter.getLetterFrom(), letter.getLetterTheme(),
                     format.format(letter.getLetterDate())});
+            lettersCopyList.add(letter);
         }
+    }
+
+    public List<LetterDTO> getLettersCopyList() {
+      return lettersCopyList;
+    }
+
+    public void initNewData(List<LetterDTO> letters) {
+        if (!data.isEmpty())
+            data.removeAll(data);
+
+        if (!lettersCopyList.isEmpty())
+            lettersCopyList.removeAll(lettersCopyList);
+
+        Iterator iterator = letters.iterator();
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+
+        while (iterator.hasNext()) {
+            LetterDTO letter = (LetterDTO) iterator.next();
+            data.add(new Object[]{false, letter.getLetterFrom(), letter.getLetterTheme(),
+                    format.format(letter.getLetterDate())});
+            lettersCopyList.add(letter);
+        }
+
+        this.fireTableDataChanged();
     }
 
     public int getColumnCount() {
@@ -78,9 +97,9 @@ public class LetterTableModel extends AbstractTableModel {
 
     public LetterDTO removeRow(int row) {
         data.remove(row);
-        LetterDTO l = lettersCopyList.remove(row);
         this.fireTableDataChanged();
-        return l;
+
+        return lettersCopyList.remove(row);
     }
 
     public void addRow(Object[] row) {
@@ -88,7 +107,4 @@ public class LetterTableModel extends AbstractTableModel {
         this.fireTableDataChanged();
     }
 
-    public List<LetterDTO> getLettersCopyList() {
-        return lettersCopyList;
-    }
 }

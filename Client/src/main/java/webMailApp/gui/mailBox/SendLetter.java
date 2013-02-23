@@ -30,7 +30,7 @@ public class SendLetter extends JFrame {
 
   public SendLetter(String letterFrom) {
       super("Send letter");
-      this.setBounds(150, 150, 600, 600);
+      this.setBounds(100, 100, 600, 600);
       this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       this.setResizable(false);
       this.setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));

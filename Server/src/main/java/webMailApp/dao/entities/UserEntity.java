@@ -14,7 +14,7 @@ import java.util.UUID;
  */
 
 @Entity
-@Table(uniqueConstraints = @UniqueConstraint(columnNames = {"userFirstName", "userLastName" }), name = "User")
+@Table(name = "User")
 @NamedQueries({
 @NamedQuery(name = "User.findByAddressName",
             query = "select u from UserEntity u where u.userAddress.addressName = :addressName"),

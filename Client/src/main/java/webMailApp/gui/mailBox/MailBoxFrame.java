@@ -6,13 +6,15 @@ import webMailApp.dao.dto.LetterDTO;
 import webMailApp.dao.dto.UserDTO;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
+import javax.swing.Timer;
 import javax.swing.tree.DefaultMutableTreeNode;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.*;
 import java.util.List;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,6 +23,8 @@ import java.util.List;
  * Time: 22:34
  * To change this template use File | Settings | File Templates.
  */
+
+
 public class MailBoxFrame extends JFrame {
     private String sessionID;
     private UserDTO user;
@@ -35,50 +39,37 @@ public class MailBoxFrame extends JFrame {
     private JButton delLetter;
     private JTable letterList;
 
+    private JButton seeLetter;
+
+    private static final UserDAO userDAO = new UserDAO();
+
+    private int delay = 5000;
+
     private List<LetterDTO> lettersData = new ArrayList<LetterDTO>();
 
+    private Timer timer;
+
     public UserDTO getUserBySession() {
-        return new UserDAO().getUserBySessionID(sessionID);
+        return userDAO.getUserBySessionID(sessionID);
     }
-
     public DefaultMutableTreeNode getAndShowLetters() {
-        List<FolderDTO> folder = new UserDAO().getRecievedLetters(user.getUserAddress());
-
+        List<FolderDTO> folder = userDAO.getRecievedLetters(user.getUserAddress());
         DefaultMutableTreeNode root = new DefaultMutableTreeNode("Inbox");
 
-        Iterator folderIterator = folder.iterator();
-        while (folderIterator.hasNext()) {
-            FolderDTO curFolder = (FolderDTO) folderIterator.next();
 
-            if (!curFolder.getFolderName().equals("Inbox")) {
-                DefaultMutableTreeNode someFolder = new DefaultMutableTreeNode(curFolder.getFolderName());
-                root.add(someFolder);
+        if (folder != null && folder.size() != 0) {
+            FolderDTO curFolder = folder.get(0);
 
-                Iterator curFolderIterator = curFolder.getLetters().iterator();
+            Iterator curFolderIterator = curFolder.getLetters().iterator();
 
-                while (curFolderIterator.hasNext()) {
-                    LetterDTO letter = (LetterDTO) curFolderIterator.next();
-                    lettersData.add(letter);
-                    someFolder.add(new MyTreeNode(letter));
-                }
-            }  else {
-                Iterator curFolderIterator = curFolder.getLetters().iterator();
-
-                while (curFolderIterator.hasNext()) {
-                    LetterDTO letter = (LetterDTO) curFolderIterator.next();
-                    lettersData.add(letter);
-                    root.add(new MyTreeNode(letter));
-                }
+            while (curFolderIterator.hasNext()) {
+                LetterDTO letter = (LetterDTO) curFolderIterator.next();
+                lettersData.add(letter);
+                root.add(new MyTreeNode(letter));
             }
-
         }
 
         return root;
-
-    }
-
-    public void delLetters(List<LetterDTO> letters) {
-        new UserDAO().delLetters(letters);
     }
 
     public MailBoxFrame(String sessionID) {
@@ -104,18 +95,23 @@ public class MailBoxFrame extends JFrame {
         letterPanel.setPreferredSize(new Dimension(this.getWidth() * 2 / 3, this.getHeight()));
         letterPanel.setBackground(Color.cyan);
 
+
+
         //-------------letters list---------------------
         letterList = new LettersList(lettersData).getTable();
         JScrollPane scrollPaneList = new JScrollPane(letterList);
         letterList.setFillsViewportHeight(true);
-
         //----------------------------------
+
         delLetter = new JButton("Delete");
         delLetter.addActionListener(new DelActionListener());
 
+        seeLetter = new JButton("See letter");
 
         letterPanel.add(delLetter);
         letterPanel.add(scrollPaneList);
+        letterPanel.add(seeLetter);
+
         this.add(letterPanel, this);
 
         folderTree = new JTree(root);
@@ -139,7 +135,57 @@ public class MailBoxFrame extends JFrame {
             }
         });
 
+        seeLetter.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int index = letterList.getSelectedRow();
+                LetterTableModel m = (LetterTableModel) letterList.getModel();
+                LetterDTO l = null;
 
+                if (index >= 0 && index < m.getLettersCopyList().size()) {
+                    l = m.getLettersCopyList().get(index);
+                    new SeeLetterFrame(l).setVisible(true);
+                }
+
+            }
+        });
+
+        prepareStartShedule();
+    }
+
+    public static void showMailBoxFrame(final String sessionID)
+    {
+        SwingUtilities.invokeLater(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                new MailBoxFrame(sessionID).setVisible(true);
+            }
+        });
+    }
+
+    private void prepareStartShedule()
+    {
+        timer = new Timer(delay, startCycle());
+        timer.start();
+    }
+
+    private Action startCycle()
+    {
+        return new AbstractAction()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                LetterTableModel m = (LetterTableModel) letterList.getModel();
+                List<FolderDTO> f = userDAO.getRecievedLetters(user.getUserAddress());
+
+                if (f != null && f.size() != 0) {
+                    m.initNewData(f.get(0).getLetters());
+                }
+            }
+        };
     }
 
     public class DelActionListener implements ActionListener {
@@ -156,16 +202,31 @@ public class MailBoxFrame extends JFrame {
                 }
             }
 
+            int curDel = del;
+
             while (del > 0) {
                 for (int i = 0; i < letterList.getRowCount(); i++) {
                     if ((Boolean)letterList.getModel().getValueAt(i, 0)) {
-                        lettersToDel.add(((LetterTableModel)letterList.getModel()).removeRow(i));
+                        lettersToDel.add(((LetterTableModel)letterList.getModel()).getLettersCopyList().get(i));
                         del--;
                     }
                 }
             }
 
-            new UserDAO().delLetters(lettersToDel);
+            del = curDel;
+
+            boolean b = userDAO.delLetters(lettersToDel);
+
+            if (b) {
+                while (del > 0) {
+                    for (int i = 0; i < letterList.getRowCount(); i++) {
+                        if ((Boolean)letterList.getModel().getValueAt(i, 0)) {
+                            ((LetterTableModel)letterList.getModel()).removeRow(i);
+                            del--;
+                        }
+                    }
+                }
+            }
         }
     }
 

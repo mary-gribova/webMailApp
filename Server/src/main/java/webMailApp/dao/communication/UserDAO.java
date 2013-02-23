@@ -26,7 +26,6 @@ public class UserDAO {
     private Logger log = Logger.getLogger(UserDAO.class.getName());
 
     private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("server");
-    private static EntityManager em = emf.createEntityManager();
 
     public boolean addUser(String userFirstName, String userLastName, Date userBirthDate,
                            String userPhone, String userPassword, String userAddress) {
@@ -40,6 +39,7 @@ public class UserDAO {
         newAddresss.setAddressName(userAddress);
         newUser.setUserAddress(newAddresss);
 
+        EntityManager em = emf.createEntityManager();
         EntityTransaction trx = em.getTransaction();
 
         try {
@@ -66,6 +66,7 @@ public class UserDAO {
         newLetter.setLetterDate(letterDate);
         newLetter.setLetterTheme(letterTheme);
 
+        EntityManager em = emf.createEntityManager();
         EntityTransaction trx = em.getTransaction();
 
         TypedQuery<AddressEntity> query = em.createNamedQuery("Address.findByName", AddressEntity.class);
@@ -135,6 +136,7 @@ public class UserDAO {
     }
 
    public String loginUser(String userAddress, String userPass) {
+       EntityManager em = emf.createEntityManager();
        TypedQuery<SessionEntity> query = em.createNamedQuery("Session.findByUserAddress",
                                                              SessionEntity.class);
        query.setParameter("userAddress", userAddress);
@@ -198,6 +200,7 @@ public class UserDAO {
    }
 
     public UserDTO getUserBySession(String sessionNum) {
+        EntityManager em = emf.createEntityManager();
        TypedQuery<UserEntity> query = em.createNamedQuery("User.findUserBySessionID", UserEntity.class);
        query.setParameter("sessionNum", sessionNum);
 
@@ -215,6 +218,7 @@ public class UserDAO {
     }
 
     public List<FolderDTO> getRecievedLetters(String addressName) {
+        EntityManager em = emf.createEntityManager();
         TypedQuery<AddressEntity> query = em.createNamedQuery("Address.findByName", AddressEntity.class);
         query.setParameter("addressName", addressName);
         List<AddressEntity> result = query.getResultList();
@@ -255,7 +259,8 @@ public class UserDAO {
         return returnedFolders;
     }
 
-    public void delLetters(List<LetterDTO> letters) {
+    public boolean delLetters(List<LetterDTO> letters) {
+        EntityManager em = emf.createEntityManager();
          TypedQuery<LetterEntity> query = em.createNamedQuery("Letter.findLetter", LetterEntity.class);
          ArrayList<LetterEntity> lettersToDel = new ArrayList<LetterEntity>();
 
@@ -286,7 +291,10 @@ public class UserDAO {
             trx.commit();
         } catch (Exception e) {
             e.printStackTrace();
+            return false;
         }
+
+        return true;
 
     }
 }
