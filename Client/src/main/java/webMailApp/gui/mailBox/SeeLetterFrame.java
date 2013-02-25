@@ -32,7 +32,7 @@ public class SeeLetterFrame extends JFrame{
     private JPanel letterBodyPanel;
 
     public SeeLetterFrame(LetterDTO letter) {
-        super("Send letter");
+        super("Letter");
         this.setBounds(100, 100, 600, 600);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setResizable(false);

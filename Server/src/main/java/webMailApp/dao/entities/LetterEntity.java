@@ -28,11 +28,11 @@ public class LetterEntity implements Serializable {
     private long letterID;
 
     @ManyToOne
-    private AddressEntity letterFrom;
+    private EmailEntity letterFrom;
 
 
     @ManyToOne
-    private AddressEntity letterTo;
+    private EmailEntity letterTo;
 
     @Column(name = "letterDate", nullable = false)
     private Date letterDate;
@@ -54,11 +54,11 @@ public class LetterEntity implements Serializable {
         return letterID;
     }
 
-    public AddressEntity getLetterFrom() {
+    public EmailEntity getLetterFrom() {
         return letterFrom;
     }
 
-    public AddressEntity getLetterTo() {
+    public EmailEntity getLetterTo() {
         return letterTo;
     }
 
@@ -78,11 +78,11 @@ public class LetterEntity implements Serializable {
         this.letterID = letterID;
     }
 
-    public void setLetterFrom(AddressEntity letterFrom) {
+    public void setLetterFrom(EmailEntity letterFrom) {
         this.letterFrom = letterFrom;
     }
 
-    public void setLetterTo(AddressEntity letterTo) {
+    public void setLetterTo(EmailEntity letterTo) {
         this.letterTo = letterTo;
     }
 

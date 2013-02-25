@@ -1,6 +1,8 @@
 package webMailApp.dao;
 
+import org.mindrot.jbcrypt.BCrypt;
 import webMailApp.ProjectConstants;
+import webMailApp.Requests;
 import webMailApp.dao.dto.FolderDTO;
 import webMailApp.dao.dto.LetterDTO;
 import webMailApp.dao.dto.LoginDTO;
@@ -21,41 +23,6 @@ public class UserDAO {
 
     public boolean addUser(String userFirstName, String userLastName, String userPass, Date userBirthDate,
                            String userPhone, String userAddress) {
-
-        try {
-            Socket socket = new Socket(ProjectConstants.SERVER_URL, ProjectConstants.SOCKET);
-            ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
-
-            try {
-                UserDTO userDTO = new UserDTO(userFirstName, userLastName, userPass,
-                        userBirthDate, userPhone, userAddress);
-
-                oos.writeObject(ProjectConstants.REGISTER_USER_REQUEST);
-                oos.writeObject(userDTO);
-
-            } catch (IOException e) {
-                e.printStackTrace();
-                return false;
-            } finally {
-
-                if (oos != null) {
-                    try {
-                        oos.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return true;
-    }
-
-    public boolean sendLetter(String letterFrom, String letterTo,
-                           String letterTheme, Date letterDate, String letterBody) {
-
         boolean retState = false;
 
         try {
@@ -64,34 +31,24 @@ public class UserDAO {
             ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
 
             try {
-                LetterDTO letterDTO = new LetterDTO(letterFrom, letterTo,
-                        letterTheme, letterDate, letterBody);
+                UserDTO userDTO = new UserDTO(userFirstName, userLastName, userPass,
+                        userBirthDate, userPhone, userAddress);
 
-                oos.writeObject(ProjectConstants.SEND_LETTER_REQUEST);
-                oos.writeObject(letterDTO);
+                oos.writeObject(Requests.REGISTER_USER_REQUEST);
+                oos.writeObject(userDTO);
 
-                String s = (String) ois.readObject();
+                String resp = (String) ois.readObject();
 
-                if (s.equals("NO")) {
-                    retState  = false;
-                } else if (s.equals("OK")) {
-                    retState = true;
-                }
+                if (resp.equals("Fail")) {
+                    retState = false;
+                } else retState = true;
 
             } catch (IOException e) {
                 e.printStackTrace();
                 return false;
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
-                return false;
             } finally {
-                if (ois != null) {
-                    try {
-                        ois.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
 
                 if (oos != null) {
                     try {
@@ -103,13 +60,13 @@ public class UserDAO {
             }
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            return retState;
         }
-
-       return retState;
     }
 
-    public String login(String userAddress, String password) {
-        String sessionID = null;
+    public boolean login(String userAddress, String password) {
+        boolean retState = false;
 
         try {
             Socket socket = new Socket(ProjectConstants.SERVER_URL, ProjectConstants.SOCKET);
@@ -119,22 +76,23 @@ public class UserDAO {
             try {
                 LoginDTO login = new LoginDTO(password, userAddress);
 
-                oos.writeObject(ProjectConstants.LOGIN_REQUEST);
+                oos.writeObject(Requests.LOGIN_REQUEST);
                 oos.writeObject(login);
 
-                String sessionIDString = (String) ois.readObject();
+                String resp = (String) ois.readObject();
 
-                if (!sessionIDString.equals(""))
-                    sessionID = sessionIDString;
+                if (!resp.equals("Fail"))
+                    retState = true;
                 else
-                    sessionID = null;
+                    retState = false;
 
             } catch (IOException e) {
                 e.printStackTrace();
+                retState = false;
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
+                retState = false;
             } finally {
-
 
                 if (ois != null) {
                     try {
@@ -154,12 +112,12 @@ public class UserDAO {
             }
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            return retState;
         }
-
-        return sessionID;
     }
 
-    public UserDTO getUserBySessionID(String sessionID) {
+    public UserDTO getUserByEmail(String email) {
         UserDTO user = null;
 
         try {
@@ -168,10 +126,8 @@ public class UserDAO {
             ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
 
             try {
-                String sessionNum = sessionID.toString();
-
-                oos.writeObject(ProjectConstants.GET_USER_BY_SESSION_ID_REQUEST);
-                oos.writeObject(sessionNum);
+                oos.writeObject(Requests.GET_USER_BY_EMAIL);
+                oos.writeObject(email);
 
                 Object ob = ois.readObject();
 
@@ -206,105 +162,6 @@ public class UserDAO {
         }
 
         return user;
-    }
-
-    public List<FolderDTO> getRecievedLetters(String addressName) {
-        List<FolderDTO> folders = null;
-
-        try {
-            Socket socket = new Socket(ProjectConstants.SERVER_URL, ProjectConstants.SOCKET);
-            ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
-            ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
-
-            try {
-                oos.writeObject(ProjectConstants.GET_RECIEVED_LETTERS);
-                oos.writeObject(addressName);
-                folders = new ArrayList<FolderDTO>();
-
-                Object ob = ois.readObject();
-
-                while (!ob.toString().equals("end")) {
-                    if (ob instanceof FolderDTO)
-                        folders.add((FolderDTO) ob);
-
-                    ob = ois.readObject();
-                }
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-            } finally {
-
-                if (ois != null) {
-                    try {
-                        ois.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-
-                if (oos != null) {
-                    try {
-                        oos.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return folders;
-    }
-
-    public boolean delLetters(List<LetterDTO> letters) {
-        boolean retState = false;
-
-        try {
-            Socket socket = new Socket(ProjectConstants.SERVER_URL, ProjectConstants.SOCKET);
-            ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
-            ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
-
-            try {
-                oos.writeObject(ProjectConstants.DEL_LETTERS_REQUEST);
-
-                for (LetterDTO l : letters) {
-                    oos.writeObject(l);
-                }
-
-                oos.writeObject("End");
-
-                if (ois.readObject().toString().equals("OK"))
-                    retState = true;
-                else retState = false;
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            } finally {
-
-                if (ois != null) {
-                    try {
-                        ois.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-
-                if (oos != null) {
-                    try {
-                        oos.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            return retState;
-        }
     }
 
 }

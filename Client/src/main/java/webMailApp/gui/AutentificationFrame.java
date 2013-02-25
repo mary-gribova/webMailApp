@@ -86,10 +86,10 @@ public class AutentificationFrame extends JFrame {
                 String login = loginField.getText().toString();
                 String password = String.valueOf(passField.getPassword());
 
-                String sessionID = new UserDAO().login(login, password);
+                boolean b = new UserDAO().login(login, password);
 
-                if (sessionID != null && !sessionID.equals("")) {
-                    MailBoxFrame.showMailBoxFrame(sessionID);
+                if (b) {
+                    MailBoxFrame.showMailBoxFrame(login);
                     getFrame().setVisible(false);
                 }  else {
                     JOptionPane.showMessageDialog(getFrame(), "Incorrect login/password or you need to register");

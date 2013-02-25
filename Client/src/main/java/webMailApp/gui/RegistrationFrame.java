@@ -73,7 +73,7 @@ public class RegistrationFrame extends JFrame {
         gBC.gridy = 20;
         this.add(lastNameText, gBC);
 
-        addressLabel = new JLabel("Address: ");
+        addressLabel = new JLabel("Email: ");
         gBC.gridx = 0;
         gBC.gridy = 40;
         this.add(addressLabel, gBC);
@@ -147,6 +147,8 @@ public class RegistrationFrame extends JFrame {
                         userBirthDate, userPhone, userAddress)) {
                     new AutentificationFrame().setVisible(true);
                     getFrame().setVisible(false);
+                } else {
+                    JOptionPane.showMessageDialog(getFrame(), "User with such email is already exists!");
                 }
 
             }

@@ -1,5 +1,6 @@
 package webMailApp.gui.mailBox;
 
+import webMailApp.dao.LetterDAO;
 import webMailApp.dao.UserDAO;
 import webMailApp.dao.dto.FolderDTO;
 import webMailApp.dao.dto.LetterDTO;
@@ -8,13 +9,12 @@ import webMailApp.dao.dto.UserDTO;
 import javax.swing.*;
 import javax.swing.Timer;
 import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.*;
 import java.util.List;
-import java.util.concurrent.Executor;
-import java.util.concurrent.Executors;
 
 /**
  * Created with IntelliJ IDEA.
@@ -26,7 +26,6 @@ import java.util.concurrent.Executors;
 
 
 public class MailBoxFrame extends JFrame {
-    private String sessionID;
     private UserDTO user;
 
     private JPanel actionPanel;
@@ -48,12 +47,15 @@ public class MailBoxFrame extends JFrame {
     private List<LetterDTO> lettersData = new ArrayList<LetterDTO>();
 
     private Timer timer;
+    private final String email;
 
-    public UserDTO getUserBySession() {
-        return userDAO.getUserBySessionID(sessionID);
+    public UserDTO getUserByEmail() {
+        return userDAO.getUserByEmail(email);
     }
+
+
     public DefaultMutableTreeNode getAndShowLetters() {
-        List<FolderDTO> folder = userDAO.getRecievedLetters(user.getUserAddress());
+        List<FolderDTO> folder = new LetterDAO().getRecievedLetters(email);
         DefaultMutableTreeNode root = new DefaultMutableTreeNode("Inbox");
 
 
@@ -72,9 +74,9 @@ public class MailBoxFrame extends JFrame {
         return root;
     }
 
-    public MailBoxFrame(String sessionID) {
-        this.sessionID = sessionID;
-        user = getUserBySession();
+    public MailBoxFrame(String email) {
+        this.email = email;
+        user = getUserByEmail();
         this.setTitle("MyMailBox - " + user.getUserAddress());
 
         DefaultMutableTreeNode root = getAndShowLetters();
@@ -178,11 +180,29 @@ public class MailBoxFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e)
             {
+                /*Updating list of letters (jtable)*/
                 LetterTableModel m = (LetterTableModel) letterList.getModel();
-                List<FolderDTO> f = userDAO.getRecievedLetters(user.getUserAddress());
+                List<FolderDTO> f = new LetterDAO().getRecievedLetters(user.getUserAddress());
+
+                List<LetterDTO> letters;
 
                 if (f != null && f.size() != 0) {
-                    m.initNewData(f.get(0).getLetters());
+                    letters = f.get(0).getLetters();
+                    m.initNewData(letters);
+
+                    /*updating jtree*/
+                    DefaultTreeModel model = (DefaultTreeModel)folderTree.getModel();
+                    DefaultMutableTreeNode root = (DefaultMutableTreeNode)model.getRoot();
+                    root.removeAllChildren();
+
+                    Iterator cur = letters.iterator();
+
+                    while (cur.hasNext()) {
+                        LetterDTO letter = (LetterDTO) cur.next();
+                        root.add(new MyTreeNode(letter));
+                    }
+
+                    model.reload(root);
                 }
             }
         };
@@ -215,7 +235,7 @@ public class MailBoxFrame extends JFrame {
 
             del = curDel;
 
-            boolean b = userDAO.delLetters(lettersToDel);
+            boolean b = new LetterDAO().delLetters(lettersToDel);
 
             if (b) {
                 while (del > 0) {

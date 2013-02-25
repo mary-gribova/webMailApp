@@ -12,10 +12,7 @@ import webMailApp.dao.dto.UserDTO;
  */
 public class RegistrationService {
     public boolean register(UserDTO user) {
-        new UserDAO().addUser(user.getUserFirstName(), user.getUserLastName(), user.getUserBirthDate(),
+        return new UserDAO().addUser(user.getUserFirstName(), user.getUserLastName(), user.getUserBirthDate(),
                               user.getUserPhone(), user.getUserPass(), user.getUserAddress());
-
-
-        return true;
     }
 }

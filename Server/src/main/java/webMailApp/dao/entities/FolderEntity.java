@@ -27,7 +27,7 @@ public class FolderEntity implements Serializable {
     private String folderName;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    private AddressEntity folderAddress;
+    private EmailEntity folderAddress;
 
     @OneToMany(mappedBy = "letterFolder", cascade = CascadeType.ALL)
     private List<LetterEntity> folderLetters;
@@ -35,7 +35,7 @@ public class FolderEntity implements Serializable {
     public FolderEntity() {
     }
 
-    public FolderEntity(String folderName, AddressEntity folderAddress) {
+    public FolderEntity(String folderName, EmailEntity folderAddress) {
         this.folderName = folderName;
         this.folderAddress = folderAddress;
     }
@@ -49,7 +49,7 @@ public class FolderEntity implements Serializable {
         return folderName;
     }
 
-    public AddressEntity getFolderAddress() {
+    public EmailEntity getFolderAddress() {
         return folderAddress;
     }
 
@@ -62,7 +62,7 @@ public class FolderEntity implements Serializable {
         this.folderName = folderName;
     }
 
-    public void setFolderAddress(AddressEntity folderAddress) {
+    public void setFolderAddress(EmailEntity folderAddress) {
         this.folderAddress = folderAddress;
     }
 

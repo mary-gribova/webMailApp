@@ -1,5 +1,6 @@
 package webMailApp.gui.mailBox;
 
+import webMailApp.dao.LetterDAO;
 import webMailApp.dao.UserDAO;
 
 import javax.swing.*;
@@ -31,7 +32,7 @@ public class SendLetter extends JFrame {
   public SendLetter(String letterFrom) {
       super("Send letter");
       this.setBounds(100, 100, 600, 600);
-      this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
       this.setResizable(false);
       this.setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
 
@@ -87,12 +88,16 @@ public class SendLetter extends JFrame {
               String letterTheme = letterThemeText.getText().toString();
               String letterBody = letterBodyText.getText().toString();
 
-               UserDAO userDAO = new UserDAO();
-               boolean b = userDAO.sendLetter(letterFrom, letterTo, letterTheme, new Date(), letterBody);
+              String s = new LetterDAO().sendLetter(letterFrom, letterTo, letterTheme, new Date(), letterBody);
 
-              if (b) {
-                 getFrame().setVisible(false);
-              }
+               if (s.equals("No such to")) {
+                   JOptionPane.showMessageDialog(getFrame(), "No such recipient!");
+               } else if (s.equals("Fail")) {
+
+               } else if (s.equals("OK")) {
+                   getFrame().setVisible(false);
+               }
+
 
           }
       });

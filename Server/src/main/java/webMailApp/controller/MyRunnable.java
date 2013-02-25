@@ -1,6 +1,6 @@
 package webMailApp.controller;
 
-import webMailApp.ProjectConstants;
+import webMailApp.Requests;
 import webMailApp.dao.dto.FolderDTO;
 import webMailApp.dao.dto.LetterDTO;
 import webMailApp.dao.dto.LoginDTO;
@@ -27,12 +27,12 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class MyRunnable implements Runnable {
-    private Socket socket;
+    Socket socket;
     private ObjectOutputStream oos;
     private ObjectInputStream ois;
 
     public MyRunnable(Socket socket, ObjectOutputStream oos, ObjectInputStream ois) {
-       this.socket = socket;
+        this.socket = socket;
         this.oos = oos;
         this.ois = ois;
     }
@@ -45,48 +45,52 @@ public class MyRunnable implements Runnable {
                 ob = ois.readObject();
 
               /*Register new user*/
-                if (ob.toString().equals(ProjectConstants.REGISTER_USER_REQUEST)) {
+                if (ob.toString().equals(Requests.REGISTER_USER_REQUEST)) {
                     ob = ois.readObject();
+                    boolean b = false;
+
                     if (ob instanceof UserDTO) {
-                        new RegistrationService().register((UserDTO) ob);
+                        b = new RegistrationService().register((UserDTO) ob);
                     }
+
+                    if (b) {
+                        oos.writeObject("OK");
+                    } else oos.writeObject("Fail");
 
             /*Sending letter*/
-                } else if (ob.toString().equals(ProjectConstants.SEND_LETTER_REQUEST)) {
+                } else if (ob.toString().equals(Requests.SEND_LETTER_REQUEST)) {
                     ob = ois.readObject();
-                    boolean res = false;
+
                     if (ob instanceof LetterDTO) {
-                        res = new SendLetterService().sendLetter((LetterDTO) ob);
+                        oos.writeObject(new SendLetterService().sendLetter((LetterDTO) ob));
                     }
 
-                    if (res) {
-                        oos.writeObject("OK");
-                    } else oos.writeObject("NO");
-
             /*Login user*/
-                } else if (ob.toString().equals(ProjectConstants.LOGIN_REQUEST)) {
+                } else if (ob.toString().equals(Requests.LOGIN_REQUEST)) {
                     ob = ois.readObject();
 
                     if (ob instanceof LoginDTO) {
-                        String sesssionID = new LoginService().loginUser((LoginDTO) ob);
+                        boolean res = new LoginService().loginUser((LoginDTO) ob);
 
-                        if (sesssionID != null)
-                            oos.writeObject(sesssionID.toString());
+                        if (res)
+                            oos.writeObject("OK");
                         else
-                            oos.writeObject("");
+                            oos.writeObject("Fail");
                     }
 
              /*Get user by sessionID*/
-                } else if (ob.toString().equals(ProjectConstants.GET_USER_BY_SESSION_ID_REQUEST)) {
+                } else if (ob.toString().equals(Requests.GET_USER_BY_EMAIL)) {
                     ob = ois.readObject();
 
-                    String sessionNum = (String) ob;
-                    UserDTO user = new LoginService().findUserBySessionID(sessionNum);
+                    String email = (String) ob;
+                    UserDTO user = new LoginService().findUserByEmail(email);
 
-                    oos.writeObject(user);
+                    if (user != null)
+                      oos.writeObject(user);
+                    else oos.writeObject("Fail");
 
             /*get recieved letters*/
-                } else if (ob.toString().equals(ProjectConstants.GET_RECIEVED_LETTERS)) {
+                } else if (ob.toString().equals(Requests.GET_RECIEVED_LETTERS)) {
 
                     ob = ois.readObject();
 
@@ -102,7 +106,7 @@ public class MyRunnable implements Runnable {
 
                     oos.writeObject("end");
 
-                } else if (ob.toString().equals(ProjectConstants.DEL_LETTERS_REQUEST)) {
+                } else if (ob.toString().equals(Requests.DEL_LETTERS_REQUEST)) {
                     ArrayList<LetterDTO> letters = new ArrayList<LetterDTO>();
 
                     ob = ois.readObject();

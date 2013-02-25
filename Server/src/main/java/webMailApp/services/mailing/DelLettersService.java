@@ -1,5 +1,6 @@
 package webMailApp.services.mailing;
 
+import webMailApp.dao.communication.LetterDAO;
 import webMailApp.dao.communication.UserDAO;
 import webMailApp.dao.dto.LetterDTO;
 
@@ -14,6 +15,6 @@ import java.util.List;
  */
 public class DelLettersService {
     public boolean delLetters(List<LetterDTO> letters) {
-        return new UserDAO().delLetters(letters);
+        return new LetterDAO().delLetters(letters);
     }
 }

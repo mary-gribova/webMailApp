@@ -1,5 +1,6 @@
 package webMailApp.services.mailing;
 
+import webMailApp.dao.communication.LetterDAO;
 import webMailApp.dao.communication.UserDAO;
 import webMailApp.dao.dto.LetterDTO;
 
@@ -11,9 +12,8 @@ import webMailApp.dao.dto.LetterDTO;
  * To change this template use File | Settings | File Templates.
  */
 public class SendLetterService {
-    public boolean sendLetter(LetterDTO letter) {
-        UserDAO userDAO = new UserDAO();
-        return userDAO.sendLetter(letter.getLetterFrom(), letter.getLetterTo(), letter.getLetterTheme(),
+    public String sendLetter(LetterDTO letter) {
+        return new LetterDAO().sendLetter(letter.getLetterFrom(), letter.getLetterTo(), letter.getLetterTheme(),
                           letter.getLetterDate(), letter.getLetterBody());
     }
 }

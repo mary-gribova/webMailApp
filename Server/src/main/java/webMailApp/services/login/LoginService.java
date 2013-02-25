@@ -14,11 +14,11 @@ import java.util.UUID;
  * To change this template use File | Settings | File Templates.
  */
 public class LoginService {
-    public String loginUser(LoginDTO loginDTO) {
+    public boolean loginUser(LoginDTO loginDTO) {
         return new UserDAO().loginUser(loginDTO.getUserAddress(), loginDTO.getUserPassword());
     }
 
-    public UserDTO findUserBySessionID(String sessionID) {
-        return new UserDAO().getUserBySession(sessionID);
+    public UserDTO findUserByEmail(String email) {
+        return new UserDAO().getUserByEmail(email);
     }
 }

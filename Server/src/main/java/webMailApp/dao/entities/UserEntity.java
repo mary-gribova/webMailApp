@@ -3,7 +3,6 @@ package webMailApp.dao.entities;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
-import java.util.UUID;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,8 +17,6 @@ import java.util.UUID;
 @NamedQueries({
 @NamedQuery(name = "User.findByAddressName",
             query = "select u from UserEntity u where u.userAddress.addressName = :addressName"),
-@NamedQuery(name = "User.findUserBySessionID",
-            query = "select u from UserEntity u where u.userSession.sessionNum = :sessionNum")
 })
 public class UserEntity implements Serializable {
 
@@ -44,10 +41,7 @@ public class UserEntity implements Serializable {
     private String userPassword;
 
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "addressUser")
-    private AddressEntity userAddress;
-
-    @OneToOne(mappedBy = "sessionUser")
-    private SessionEntity userSession;
+    private EmailEntity userAddress;
 
     public UserEntity() {
     }
@@ -80,7 +74,7 @@ public class UserEntity implements Serializable {
         return userPhone;
     }
 
-    public AddressEntity getUserAddress() {
+    public EmailEntity getUserAddress() {
         return userAddress;
     }
 
@@ -108,19 +102,11 @@ public class UserEntity implements Serializable {
         this.userPhone = userPhone;
     }
 
-    public void setUserAddress(AddressEntity userAddress) {
+    public void setUserAddress(EmailEntity userAddress) {
         this.userAddress = userAddress;
     }
 
     public void setUserPassword(String userPassword) {
         this.userPassword = userPassword;
-    }
-
-    public void setUserSession(SessionEntity userSession) {
-        this.userSession = userSession;
-    }
-
-    public SessionEntity getUserSession() {
-        return userSession;
     }
 }

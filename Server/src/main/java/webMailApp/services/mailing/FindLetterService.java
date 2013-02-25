@@ -1,5 +1,6 @@
 package webMailApp.services.mailing;
 
+import webMailApp.dao.communication.LetterDAO;
 import webMailApp.dao.communication.UserDAO;
 import webMailApp.dao.dto.FolderDTO;
 
@@ -14,6 +15,6 @@ import java.util.List;
  */
 public class FindLetterService {
     public List<FolderDTO> getRecievedLetters(String addressName) {
-        return new UserDAO().getRecievedLetters(addressName);
+        return new LetterDAO().getRecievedLetters(addressName);
     }
 }
