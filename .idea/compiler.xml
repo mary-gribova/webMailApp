@@ -22,7 +22,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="BackEnd" />
         <module name="Client" />
+        <module name="common" />
         <module name="newModule" />
         <module name="Server" />
       </profile>

@@ -1,19 +1,16 @@
 package webMailApp.gui.mailBox;
 
-import webMailApp.dao.dto.LetterDTO;
+import webMailApp.dto.LetterDTO;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.*;
 import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
- * User: maru
- * Date: 13.02.13
- * Time: 23:42
- * To change this template use File | Settings | File Templates.
+ * @author Mariia Gribova
+ * @version 1.0
  */
+
 public class LettersList {
     private JTable table;
     private List<LetterDTO> letters;

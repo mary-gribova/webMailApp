@@ -141,14 +141,25 @@ public class RegistrationFrame extends JFrame {
                     userBirthDate = format.parse(getBirthText().getText());
                 } catch (ParseException e1) {
                     e1.printStackTrace();
+                    JOptionPane.showMessageDialog(getFrame(), "Date is not correct!");
                 }
 
-                if (new UserDAO().addUser(userFirstName, userLastName, userPass,
-                        userBirthDate, userPhone, userAddress)) {
-                    new AutentificationFrame().setVisible(true);
-                    getFrame().setVisible(false);
+                if (userFirstName.equals("") || userLastName.equals("") || userPhone.equals("") || userPass.equals("") ||
+                        userAddress.equals("")) {
+                    JOptionPane.showMessageDialog(getFrame(), "You must fill all fields!");
                 } else {
-                    JOptionPane.showMessageDialog(getFrame(), "User with such email is already exists!");
+                   if (userPass.length() < 5 ) {
+                       JOptionPane.showMessageDialog(getFrame(), "Password length must be more or equal 5!");
+                   } else {
+                       if (new UserDAO().addUser(userFirstName, userLastName, userPass,
+                               userBirthDate, userPhone, userAddress)) {
+                           new AutentificationFrame().setVisible(true);
+                           getFrame().setVisible(false);
+                       } else {
+                           JOptionPane.showMessageDialog(getFrame(), "User with such email is already exists!");
+                       }
+
+                   }
                 }
 
             }

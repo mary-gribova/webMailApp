@@ -1,26 +1,34 @@
 package webMailApp.dao;
 
-import org.mindrot.jbcrypt.BCrypt;
 import webMailApp.ProjectConstants;
 import webMailApp.Requests;
-import webMailApp.dao.dto.FolderDTO;
-import webMailApp.dao.dto.LetterDTO;
-import webMailApp.dao.dto.LoginDTO;
-import webMailApp.dao.dto.UserDTO;
+import webMailApp.dto.LoginDTO;
+import webMailApp.dto.UserDTO;
 
 import java.io.*;
 import java.net.Socket;
 import java.util.*;
 
-/**
- * Created with IntelliJ IDEA.
- * User: maru
- * Date: 15.02.13
- * Time: 16:45
- * To change this template use File | Settings | File Templates.
- */
-public class UserDAO {
 
+/**
+ * @author Mariia Gribova
+ * @version 1.0
+ *
+ * Class for operations with user information (communication with server),
+ * such as registering new user, login and get user by email address
+ */
+
+public class UserDAO {
+    /**
+     *
+     * @param userFirstName user first name
+     * @param userLastName user last name
+     * @param userPass user password
+     * @param userBirthDate user birth date
+     * @param userPhone user phone
+     * @param userAddress user email address
+     * @return true if success, false if there is some exception
+     */
     public boolean addUser(String userFirstName, String userLastName, String userPass, Date userBirthDate,
                            String userPhone, String userAddress) {
         boolean retState = false;
@@ -65,6 +73,12 @@ public class UserDAO {
         }
     }
 
+    /**
+     *
+     * @param userAddress email address of user
+     * @param password user's password
+     * @return true if success, false if there is some exception
+     */
     public boolean login(String userAddress, String password) {
         boolean retState = false;
 
@@ -117,6 +131,11 @@ public class UserDAO {
         }
     }
 
+    /**
+     *
+     * @param email user's email address
+     * @return user transfer object or null if there is no user with such email address
+     */
     public UserDTO getUserByEmail(String email) {
         UserDTO user = null;
 

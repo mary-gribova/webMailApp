@@ -1,21 +1,16 @@
 package webMailApp.gui.mailBox;
 
-import webMailApp.dao.UserDAO;
-import webMailApp.dao.dto.LetterDTO;
+
+import webMailApp.dto.LetterDTO;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.Date;
 
 /**
- * Created with IntelliJ IDEA.
- * User: maru
- * Date: 22.02.13
- * Time: 2:22
- * To change this template use File | Settings | File Templates.
+ * @author Mariia Gribova
+ * @version 1.0
  */
+
 public class SeeLetterFrame extends JFrame{
     private JLabel letterToLabel;
     private JLabel letterFromLabel;

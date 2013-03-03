@@ -1,16 +1,14 @@
 package webMailApp.gui.mailBox;
 
-import webMailApp.dao.dto.LetterDTO;
+import webMailApp.dto.LetterDTO;
 
 import javax.swing.tree.DefaultMutableTreeNode;
 
 /**
- * Created with IntelliJ IDEA.
- * User: maru
- * Date: 19.02.13
- * Time: 21:32
- * To change this template use File | Settings | File Templates.
+ * @author Mariia Gribova
+ * @version 1.0
  */
+
 public class MyTreeNode extends DefaultMutableTreeNode {
     private LetterDTO letter;
 

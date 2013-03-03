@@ -1,6 +1,6 @@
 package webMailApp.gui.mailBox;
 
-import webMailApp.dao.dto.LetterDTO;
+import webMailApp.dto.LetterDTO;
 
 import javax.swing.table.AbstractTableModel;
 import java.text.SimpleDateFormat;
@@ -9,11 +9,8 @@ import java.util.List;
 import java.util.Iterator;
 
 /**
- * Created with IntelliJ IDEA.
- * User: maru
- * Date: 14.02.13
- * Time: 0:10
- * To change this template use File | Settings | File Templates.
+ * @author Mariia Gribova
+ * @version 1.0
  */
 
 public class LetterTableModel extends AbstractTableModel {

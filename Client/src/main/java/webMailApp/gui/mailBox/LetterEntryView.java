@@ -1,12 +1,10 @@
 package webMailApp.gui.mailBox;
 
 /**
- * Created with IntelliJ IDEA.
- * User: maru
- * Date: 14.02.13
- * Time: 1:55
- * To change this template use File | Settings | File Templates.
+ * @author Mariia Gribova
+ * @version 1.0
  */
+
 public class LetterEntryView {
     private String fromLetter;
     private String themeLetter;

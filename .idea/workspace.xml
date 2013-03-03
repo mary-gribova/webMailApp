@@ -1,61 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/Client/src/main/java/webMailApp/dao/UserDAO.java" line="24" />
+    <bookmark url="file://$PROJECT_DIR$/Client/src/main/java/webMailApp/dao/UserDAO.java" line="32" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80321b18-37b9-4073-afe4-4acf18000a95" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Client/src/main/java/webMailApp/dao/LetterDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Client/src/test/java/webMailApp/LetterDAOTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/src/test/java/webMailApp/LetterDAOTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mindrot_jbcrypt_0_3m.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_all_1_8_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/src/main/java/webMailApp/Requests.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Client/src/test/java/webMailApp/UserDAOTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/src/test/java/webMailApp/UserDAOTest.java" />
-      <change type="DELETED" beforePath="C:\gitrepos\t-systems\webMailApp\.idea\libraries\Maven__junit_junit_3_8_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\gitrepos\t-systems\webMailApp\Client\src\main\java\webMailApp\dao\dto\AddressDTO.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\java\webMailApp\dao\communication\AddressDAO.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\java\webMailApp\dao\dto\AddressDTO.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\java\webMailApp\dao\entities\SessionEntity.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\gitrepos\t-systems\webMailApp\src\test\java\webMailApp\AppTest.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\java\webMailApp\dao\communication\FolderDAO.java" afterPath="$PROJECT_DIR$/Client/src/main/java/webMailApp/Requests.java" />
-      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\java\webMailApp\dao\entities\AddressEntity.java" afterPath="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/entities/EmailEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/AutentificationFrame.java" afterPath="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/AutentificationFrame.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackEnd/BackEnd.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/Server_war.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/Server_war_exploded.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/src/main/java/webMailAppEE/UserServlet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/common.iml" />
+      <change type="DELETED" beforePath="C:\gitrepos\t-systems\webMailApp\Client\src\main\java\webMailApp\dao\dto\LetterDTO.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\gitrepos\t-systems\webMailApp\Client\src\main\java\webMailApp\dao\dto\LoginDTO.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\gitrepos\t-systems\webMailApp\Client\src\test\java\webMailApp\LetterDAOTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\gitrepos\t-systems\webMailApp\Client\src\test\java\webMailApp\UserDAOTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\java\webMailApp\dao\dto\FolderDTO.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\java\webMailApp\dao\dto\UserDTO.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\test\java\webMailApp\LetterDAOTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\test\java\webMailApp\UserDAOTest.java" afterPath="" />
+      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\Client\src\main\java\webMailApp\dao\dto\FolderDTO.java" afterPath="$PROJECT_DIR$/common/src/main/java/webMailApp/dto/FolderDTO.java" />
+      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\Client\src\main\java\webMailApp\dao\dto\UserDTO.java" afterPath="$PROJECT_DIR$/common/src/main/java/webMailApp/dto/UserDTO.java" />
+      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\pom.xml" afterPath="$PROJECT_DIR$/BackEnd/pom.xml" />
+      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\java\webMailApp\ProjectConstants.java" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/webMailApp/ProjectConstants.java" />
+      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\java\webMailApp\Requests.java" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/webMailApp/Requests.java" />
+      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\java\webMailApp\controller\MainController.java" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/webMailApp/controller/MainController.java" />
+      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\java\webMailApp\controller\MyRunnable.java" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/webMailApp/controller/MyRunnable.java" />
+      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\java\webMailApp\dao\communication\LetterDAO.java" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/webMailApp/dao/LetterDAO.java" />
+      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\java\webMailApp\dao\communication\UserDAO.java" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/webMailApp/dao/UserDAO.java" />
+      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\java\webMailApp\dao\dto\LetterDTO.java" afterPath="$PROJECT_DIR$/common/src/main/java/webMailApp/dto/LetterDTO.java" />
+      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\java\webMailApp\dao\dto\LoginDTO.java" afterPath="$PROJECT_DIR$/common/src/main/java/webMailApp/dto/LoginDTO.java" />
+      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\java\webMailApp\dao\entities\EmailEntity.java" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/webMailApp/entities/EmailEntity.java" />
+      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\java\webMailApp\dao\entities\FolderEntity.java" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/webMailApp/entities/FolderEntity.java" />
+      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\java\webMailApp\dao\entities\LetterEntity.java" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/webMailApp/entities/LetterEntity.java" />
+      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\java\webMailApp\dao\entities\UserEntity.java" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/webMailApp/entities/UserEntity.java" />
+      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\java\webMailApp\services\login\LoginService.java" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/webMailApp/services/login/LoginService.java" />
+      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\java\webMailApp\services\mailing\DelLettersService.java" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/webMailApp/services/mailing/DelLettersService.java" />
+      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\java\webMailApp\services\mailing\FindLetterService.java" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/webMailApp/services/mailing/FindLetterService.java" />
+      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\java\webMailApp\services\mailing\SendLetterService.java" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/webMailApp/services/mailing/SendLetterService.java" />
+      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\java\webMailApp\services\registration\RegistrationService.java" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/webMailApp/services/registration/RegistrationService.java" />
+      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\resources\META-INF\MANIFEST.MF" afterPath="$PROJECT_DIR$/BackEnd/src/main/resources/META-INF/MANIFEST.MF" />
+      <change type="MOVED" beforePath="C:\gitrepos\t-systems\webMailApp\Server\src\main\resources\META-INF\persistence.xml" afterPath="$PROJECT_DIR$/BackEnd/src/main/resources/META-INF/persistence.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/Client.iml" afterPath="$PROJECT_DIR$/Client/Client.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/src/main/java/webMailApp/services/mailing/DelLettersService.java" afterPath="$PROJECT_DIR$/Server/src/main/java/webMailApp/services/mailing/DelLettersService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/src/main/java/webMailApp/services/mailing/FindLetterService.java" afterPath="$PROJECT_DIR$/Server/src/main/java/webMailApp/services/mailing/FindLetterService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/entities/FolderEntity.java" afterPath="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/entities/FolderEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/communication/LetterDAO.java" afterPath="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/communication/LetterDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/entities/LetterEntity.java" afterPath="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/entities/LetterEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/src/main/java/webMailApp/services/login/LoginService.java" afterPath="$PROJECT_DIR$/Server/src/main/java/webMailApp/services/login/LoginService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/src/main/java/webMailApp/dao/LetterDAO.java" afterPath="$PROJECT_DIR$/Client/src/main/java/webMailApp/dao/LetterDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/LetterEntryView.java" afterPath="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/LetterEntryView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/LetterTableModel.java" afterPath="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/LetterTableModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/LettersList.java" afterPath="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/LettersList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/MailBoxFrame.java" afterPath="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/MailBoxFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/src/main/java/webMailApp/controller/MyRunnable.java" afterPath="$PROJECT_DIR$/Server/src/main/java/webMailApp/controller/MyRunnable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/src/main/java/webMailApp/ProjectConstants.java" afterPath="$PROJECT_DIR$/Client/src/main/java/webMailApp/ProjectConstants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/src/main/java/webMailApp/ProjectConstants.java" afterPath="$PROJECT_DIR$/Server/src/main/java/webMailApp/ProjectConstants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/MyTreeNode.java" afterPath="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/MyTreeNode.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/RegistrationFrame.java" afterPath="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/RegistrationFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/src/main/java/webMailApp/services/registration/RegistrationService.java" afterPath="$PROJECT_DIR$/Server/src/main/java/webMailApp/services/registration/RegistrationService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/SeeLetterFrame.java" afterPath="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/SeeLetterFrame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/SendLetter.java" afterPath="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/SendLetter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/src/main/java/webMailApp/services/mailing/SendLetterService.java" afterPath="$PROJECT_DIR$/Server/src/main/java/webMailApp/services/mailing/SendLetterService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/Server.iml" afterPath="$PROJECT_DIR$/Server/Server.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/src/main/java/webMailApp/dao/UserDAO.java" afterPath="$PROJECT_DIR$/Client/src/main/java/webMailApp/dao/UserDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/communication/UserDAO.java" afterPath="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/communication/UserDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/entities/UserEntity.java" afterPath="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/entities/UserEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/pom.xml" afterPath="$PROJECT_DIR$/Client/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/pom.xml" afterPath="$PROJECT_DIR$/Server/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webMailApp.iml" afterPath="$PROJECT_DIR$/webMailApp.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="webMailApp.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361780073175" ignored="false" />
+    <file path="/Dummy.txt" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362335224491" ignored="false" />
     <file path="C:/ProjectTrainings/First/pom.xml" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360570837922" ignored="false" />
-    <file path="/pom.xml" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361280381975" ignored="false" />
+    <file path="/pom.xml" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362334683032" ignored="false" />
     <file path="/AutentificationFrame.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361784488534" ignored="false" />
-    <file path="/RegistrationFrame.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361786770823" ignored="false" />
+    <file path="/RegistrationFrame.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361826366961" ignored="false" />
     <file path="/MailBoxFrame.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361785212926" ignored="false" />
-    <file path="/fragment.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361795083890" ignored="false" />
+    <file path="/fragment.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362335231112" ignored="false" />
     <file path="/persistence.xml" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361050213683" ignored="false" />
     <file path="/LetterEntry.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360782652983" ignored="false" />
     <file path="/LetterEntryRenderer.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360782704419" ignored="false" />
@@ -63,9 +79,9 @@
     <file path="/LetterTableModel.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361485737968" ignored="false" />
     <file path="/LetterEntryView.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360844910099" ignored="false" />
     <file path="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/DelActionListener.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360793159075" ignored="false" />
-    <file path="/UserDTO.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361788608061" ignored="false" />
-    <file path="/LetterDTO.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361047385119" ignored="false" />
-    <file path="/FolderDTO.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361117268743" ignored="false" />
+    <file path="/UserDTO.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361797673779" ignored="false" />
+    <file path="/LetterDTO.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361797653047" ignored="false" />
+    <file path="/FolderDTO.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361797643386" ignored="false" />
     <file path="/AddressDTO.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361115001823" ignored="false" />
     <file path="/hibernate.cfg.xml" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360835450075" ignored="false" />
     <file path="C:/ProjectTrainings/Test05/src/TestThreads.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360852305402" ignored="false" />
@@ -79,7 +95,7 @@
     <file path="/Main.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361296395244" ignored="false" />
     <file path="/CreateTables.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360921769496" ignored="false" />
     <file path="/DAOFactory.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360930733167" ignored="false" />
-    <file path="/UserDAO.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361789035693" ignored="false" />
+    <file path="/UserDAO.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361797794807" ignored="false" />
     <file path="/Constants.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360934638446" ignored="false" />
     <file path="/MainController.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361483989082" ignored="false" />
     <file path="/Tables.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1360940586505" ignored="false" />
@@ -103,13 +119,13 @@
     <file path="C:/ProjectTrainings/TestJPA/.idea/workspace.xml" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361037683916" ignored="false" />
     <file path="C:/ProjectTrainings/TestJPA/.idea/encodings.xml" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361036904870" ignored="false" />
     <file path="/SessionEntity.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361111360386" ignored="false" />
-    <file path="/LetterDAO.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361786403641" ignored="false" />
+    <file path="/LetterDAO.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361797731153" ignored="false" />
     <file path="/LetterEntity.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361308324676" ignored="false" />
-    <file path="/SendLetter.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361787435164" ignored="false" />
+    <file path="/SendLetter.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361826073562" ignored="false" />
     <file path="/SendLetterService.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361629802702" ignored="false" />
     <file path="/LoginService.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361784687967" ignored="false" />
     <file path="/ProjectConstants.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361784156357" ignored="false" />
-    <file path="/LoginDTO.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361093517056" ignored="false" />
+    <file path="/LoginDTO.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361797665704" ignored="false" />
     <file path="/FindLetterService.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361629789835" ignored="false" />
     <file path="C:/Test07/src/Main.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361197550322" ignored="false" />
     <file path="C:/Test07/.idea/workspace.xml" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361199835015" ignored="false" />
@@ -122,6 +138,45 @@
     <file path="/SeeLetterFrame.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361486154440" ignored="false" />
     <file path="/LetterDAOTest.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361795559600" ignored="false" />
     <file path="/UserDAOTest.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1361795669151" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/.idea/workspace.xml" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362067134087" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/Server/src/main/java/webMailApp/MyServlet.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362061274056" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/.idea/misc.xml" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362059211079" ignored="false" />
+    <file path="/MyServlet.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362061044086" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/Server/pom.xml" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362059296734" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/Server/src/main/java/webMailApp/LetterServlet.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362067077164" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/Server/src/main/webapp/WEB-INF/web.xml" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362067115952" ignored="false" />
+    <file path="/web.xml" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362061863345" ignored="false" />
+    <file path="/a.txt" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362059962910" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/Server/src/main/webapp/index.jsp" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362061628594" ignored="false" />
+    <file path="/index.jsp" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362060342443" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/Server/src/main/webapp/my.jsp" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362061849939" ignored="false" />
+    <file path="/my.jsp" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362061849939" ignored="false" />
+    <file path="/LetterServlet.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362338023029" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/BackEnd/src/test/java/webMailApp/LetterDAOTest.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362066725387" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/common/pom.xml" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362066867396" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/BackEnd/pom.xml" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362067115951" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/BackEnd/src/main/java/webMailAppEE/services/login/LoginService.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362067115948" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/BackEnd/src/main/java/webMailAppEE/services/mailing/DelLettersService.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362067115949" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/BackEnd/src/main/java/webMailAppEE/services/mailing/FindLetterService.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362067115949" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/Server/src/main/java/webMailAppEE/LetterServlet.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362067115949" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/BackEnd/src/main/java/webMailAppEE/services/mailing/SendLetterService.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362067115949" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/BackEnd/src/main/java/webMailAppEE/services/registration/RegistrationService.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362067115950" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/common/src/main/java/webMailAppEE/dto/FolderDTO.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362067115950" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/common/src/main/java/webMailAppEE/dto/LetterDTO.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362067115950" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/common/src/main/java/webMailAppEE/dto/LoginDTO.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362067115950" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/common/src/main/java/webMailAppEE/dto/UserDTO.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362067115950" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/BackEnd/src/main/java/webMailAppEE/ProjectConstants.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362067115951" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/BackEnd/src/main/java/webMailAppEE/Requests.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362067115951" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/BackEnd/src/main/java/webMailAppEE/controller/MainController.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362067115951" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/BackEnd/src/main/java/webMailAppEE/controller/MyRunnable.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362067115951" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/BackEnd/src/main/java/webMailAppEE/dao/LetterDAO.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362067115951" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/BackEnd/src/main/java/webMailAppEE/dao/UserDAO.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362067115952" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/BackEnd/src/main/java/webMailAppEE/entities/EmailEntity.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362067115952" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/BackEnd/src/main/java/webMailAppEE/entities/FolderEntity.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362067115952" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/BackEnd/src/main/java/webMailAppEE/entities/LetterEntity.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362067115952" ignored="false" />
+    <file path="$PROJECT_DIR$/../webMailAppEE/BackEnd/src/main/java/webMailAppEE/entities/UserEntity.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362067115952" ignored="false" />
+    <file path="C:/compgraphics/Lab02/.idea/workspace.xml" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362082609564" ignored="false" />
+    <file path="/UserServlet.java" changelist="80321b18-37b9-4073-afe4-4acf18000a95" time="1362338094212" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,6 +206,7 @@
   </component>
   <component name="DebuggerManager">
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -185,7 +241,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -194,7 +249,28 @@
     <favorites_list name="webMailApp" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="LetterServlet.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Server/src/main/java/webMailAppEE/LetterServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="0" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.78673834">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server/src/main/java/webMailAppEE/UserServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="0" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -212,22 +288,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Server/src/main/java/webMailApp/ProjectConstants.java" />
-        <option value="$PROJECT_DIR$/Client/src/main/java/webMailApp/dao/LetterDAO.java" />
+        <option value="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/MyTreeNode.java" />
+        <option value="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/SeeLetterFrame.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/webMailApp/controller/MainController.java" />
         <option value="$PROJECT_DIR$/Server/src/main/java/webMailApp/controller/MyRunnable.java" />
-        <option value="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/RegistrationFrame.java" />
-        <option value="$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/mailBox/SendLetter.java" />
-        <option value="$PROJECT_DIR$/Client/src/main/java/webMailApp/dao/dto/UserDTO.java" />
-        <option value="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/entities/UserEntity.java" />
-        <option value="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/dto/UserDTO.java" />
-        <option value="$PROJECT_DIR$/Client/src/main/java/webMailApp/dao/UserDAO.java" />
-        <option value="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/communication/UserDAO.java" />
-        <option value="$PROJECT_DIR$/Client/pom.xml" />
-        <option value="$PROJECT_DIR$/Client/src/test/java/webMailApp/UserDAOTest.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/LetterDAO.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/UserDAO.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/webMailApp/services/mailing/DelLettersService.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/webMailApp/services/login/LoginService.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/webMailApp/services/mailing/FindLetterService.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/webMailApp/services/mailing/SendLetterService.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/webMailApp/services/registration/RegistrationService.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/BackEnd/pom.xml" />
         <option value="$PROJECT_DIR$/Server/pom.xml" />
-        <option value="$PROJECT_DIR$/Server/src/test/java/webMailApp/LetterDAOTest.java" />
-        <option value="$PROJECT_DIR$/Client/src/test/java/webMailApp/LetterDAOTest.java" />
-        <option value="$PROJECT_DIR$/Server/src/test/java/webMailApp/UserDAOTest.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/webMailAppEE/LetterServlet.java" />
+        <option value="$PROJECT_DIR$/Server/src/main/java/webMailAppEE/UserServlet.java" />
       </list>
     </option>
   </component>
@@ -270,13 +346,37 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
       </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Client" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Client" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -331,7 +431,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -383,15 +482,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webMailApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webMailApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -451,230 +576,17 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webMailApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webMailApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webMailApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webMailApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webMailApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webMailApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webMailApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webMailApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webMailApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webMailApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="communication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webMailApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webMailApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webMailApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webMailApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webMailApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webMailApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webMailApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webMailApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webMailApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webMailApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webMailApp" />
+              <option name="myItemId" value="webMailAppEE" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="Persistence.ERD.GroupObjects" value="false" />
@@ -682,7 +594,7 @@
     <property name="Persistence.ERD.MergeEmbedded" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../diploma/geocube/GeoCubeProject" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../webMailAppEE" />
     <property name="Database.TableEditor.Splitter" value="0.8999999" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -690,8 +602,8 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/Client/src/main/java/webMailApp" />
-    <property name="options.lastSelected" value="project.propCompiler" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/Server/src/main/java/webMailApp" />
+    <property name="options.lastSelected" value="preferences.applicationServers" />
     <property name="Persistence.ERD.SimpleMode" value="false" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -718,119 +630,7 @@
       <recent name="C:\gitrepos\t-systems\webMailApp\Server" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainController">
-    <configuration default="false" name="LetterDAOTest.getRecievedLettersTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="webMailApp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Client" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="webMailApp" />
-      <option name="MAIN_CLASS_NAME" value="webMailApp.LetterDAOTest" />
-      <option name="METHOD_NAME" value="getRecievedLettersTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="LetterDAOTest.delLettersTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="webMailApp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Client" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="webMailApp" />
-      <option name="MAIN_CLASS_NAME" value="webMailApp.LetterDAOTest" />
-      <option name="METHOD_NAME" value="delLettersTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="LetterDAOTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="webMailApp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Server" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="webMailApp" />
-      <option name="MAIN_CLASS_NAME" value="webMailApp.LetterDAOTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="UserDAOTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="webMailApp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Server" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="webMailApp" />
-      <option name="MAIN_CLASS_NAME" value="webMailApp.UserDAOTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Tomcat Server.Server">
     <configuration default="false" name="MainController" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -839,18 +639,20 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="webMailApp.controller.MainController" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Server" />
+      <module name="BackEnd" />
       <envs />
       <RunnerSettings RunnerId="Cover" />
+      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Cover" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -878,6 +680,13 @@
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="TomeeConfiguration" factoryName="Local">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -965,10 +774,47 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
     <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
       <option name="VM_PARAMETERS" value="" />
       <option name="USER_CFG_CLASS" />
       <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Main" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="webMailApp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="webMailApp.Main" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Client" />
+      <envs />
+      <RunnerSettings RunnerId="Cover" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Cover" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="false" name="Server [install]" type="MavenRunConfiguration" factoryName="Maven">
@@ -1021,53 +867,90 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="Main" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="webMailApp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="webMailApp.Main" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Client" />
-      <envs />
+    <configuration default="false" name="Server" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Server:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_webMailApp_2" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <RunnerSettings RunnerId="Cover" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
+        <option name="DEBUG_PORT" value="55182" />
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Cover" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Server:war" />
+        </option>
+      </method>
     </configuration>
-    <list size="8">
-      <item index="0" class="java.lang.String" itemvalue="Maven.Server [install]" />
-      <item index="1" class="java.lang.String" itemvalue="Maven.Client [install]" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.LetterDAOTest.getRecievedLettersTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.LetterDAOTest.delLettersTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.LetterDAOTest" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.UserDAOTest" />
-      <item index="7" class="java.lang.String" itemvalue="Application.MainController" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="1" class="java.lang.String" itemvalue="Application.MainController" />
+      <item index="2" class="java.lang.String" itemvalue="Maven.Server [install]" />
+      <item index="3" class="java.lang.String" itemvalue="Maven.Client [install]" />
+      <item index="4" class="java.lang.String" itemvalue="Tomcat Server.Server" />
     </list>
     <recent_temporary>
-      <list size="5">
+      <list size="3">
         <item index="0" class="java.lang.String" itemvalue="Application.MainController" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.UserDAOTest" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.LetterDAOTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.UserDAOTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.LetterDAOTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1108,14 +991,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33137673" sideWeight="0.32142857" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24772727" sideWeight="0.37157536" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.07417289" sideWeight="0.72433037" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.051760938" sideWeight="0.9363839" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38504463" sideWeight="0.4850587" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1123,20 +1006,20 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.01674107" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.081109926" sideWeight="0.9754464" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3939732" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20660523" sideWeight="0.7640845" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22042139" sideWeight="0.875" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31696904" sideWeight="0.9754464" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.02455357" sideWeight="0.9204909" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.07366072" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24469697" sideWeight="0.7089041" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29109588" sideWeight="0.9204909" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11515152" sideWeight="0.9754464" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3515625" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1200,136 +1083,129 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Client/src/main/java/webMailApp/gui/RegistrationFrame.java">
+    <entry file="file://$PROJECT_DIR$/BackEnd/src/main/java/webMailApp/entities/EmailEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="13" selection-start="495" selection-end="495" vertical-scroll-proportion="-1.7586207">
+        <state line="21" column="13" selection-start="548" selection-end="548" vertical-scroll-proportion="-0.545977">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/entities/UserEntity.java">
+    <entry file="file://$PROJECT_DIR$/BackEnd/src/main/java/webMailApp/services/mailing/DelLettersService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="38" selection-start="2613" selection-end="2613" vertical-scroll-proportion="0.8045977">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/dto/UserDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="65" selection-start="1232" selection-end="1232" vertical-scroll-proportion="0.745977">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/webMailApp/services/registration/RegistrationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="288" selection-end="288" vertical-scroll-proportion="0.21494253">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/webMailApp/services/login/LoginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="80" selection-start="243" selection-end="243" vertical-scroll-proportion="0.1367816">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/webMailApp/controller/MyRunnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="13" selection-start="839" selection-end="839" vertical-scroll-proportion="0.01954023">
+        <state line="15" column="37" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3702#3713#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/pom.xml">
+    <entry file="file://$PROJECT_DIR$/BackEnd/src/main/java/webMailApp/services/login/LoginService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="3" selection-start="1219" selection-end="1219" vertical-scroll-proportion="0.0">
+        <state line="18" column="16" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackEnd/src/main/java/webMailApp/services/mailing/FindLetterService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="22" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackEnd/src/main/java/webMailApp/services/mailing/SendLetterService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="35" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackEnd/src/main/java/webMailApp/services/registration/RegistrationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="33" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackEnd/src/main/java/webMailApp/controller/MyRunnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="53" selection-start="3976" selection-end="3976" vertical-scroll-proportion="0.29655173">
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#3686#3697#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackEnd/src/main/java/webMailApp/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="21" selection-start="68" selection-end="68" vertical-scroll-proportion="0.05862069">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/src/main/java/webMailApp/dao/LetterDAO.java">
+    <entry file="file://$PROJECT_DIR$/BackEnd/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="1233" selection-end="1233" vertical-scroll-proportion="0.21149425">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getRecievedLetters#0;class#LetterDAO#0" expanded="false" />
-          </folding>
+        <state line="9" column="29" selection-start="0" selection-end="1092" vertical-scroll-proportion="0.17811409">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/src/main/java/webMailApp/dao/UserDAO.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="19" selection-start="3687" selection-end="3687" vertical-scroll-proportion="-0.055172414">
-          <folding>
-            <element signature="method#addUser#0;class#UserDAO#0" expanded="false" />
-          </folding>
+        <state line="12" column="48" selection-start="506" selection-end="506" vertical-scroll-proportion="0.2509225">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/communication/LetterDAO.java">
+    <entry file="file://$PROJECT_DIR$/BackEnd/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="144" column="0" selection-start="5419" selection-end="5419" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="method#sendLetter#0;class#LetterDAO#0" expanded="false" />
-            <element signature="method#getRecievedLetters#0;class#LetterDAO#0" expanded="false" />
-            <element signature="method#delLetters#0;class#LetterDAO#0" expanded="false" />
-          </folding>
+        <state line="22" column="116" selection-start="802" selection-end="802" vertical-scroll-proportion="0.4600246">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="1437" selection-end="1437" vertical-scroll-proportion="0.45287356">
+        <state line="35" column="33" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.7318573">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/src/test/java/webMailApp/UserDAOTest.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.6.0_39/src.zip!/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="92" selection-start="925" selection-end="1008" vertical-scroll-proportion="0.74252874">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="407" column="6" selection-start="18707" selection-end="18707" vertical-scroll-proportion="0.33333334">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/src/test/java/webMailApp/LetterDAOTest.java">
+    <entry file="file://$PROJECT_DIR$/BackEnd/src/main/java/webMailApp/dao/LetterDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="42" selection-start="703" selection-end="703" vertical-scroll-proportion="0.5862069">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="117" column="27" selection-start="4164" selection-end="4164" vertical-scroll-proportion="0.33333334">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/test/java/webMailApp/UserDAOTest.java">
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/webMailAppEE/UserServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="86" selection-start="687" selection-end="687" vertical-scroll-proportion="0.5275862">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="3" column="0" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/test/java/webMailApp/LetterDAOTest.java">
+    <entry file="file://$PROJECT_DIR$/Server/src/main/java/webMailAppEE/LetterServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="18" selection-start="406" selection-end="406" vertical-scroll-proportion="0.35172415">
+        <state line="43" column="0" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.78673834">
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main/java/webMailApp/dao/communication/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1280" selection-end="1280" vertical-scroll-proportion="0.15977012">
-          <folding>
-            <element signature="method#getUserByEmail#0;class#UserDAO#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1365,6 +1241,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>JOGL 2.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1388,11 +1265,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>JPA|webMailApp</last-edited>
+          <last-edited>Server</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1400,11 +1278,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: com.sun.jmx:jmxri:1.2.1</last-edited>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.48554897" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>

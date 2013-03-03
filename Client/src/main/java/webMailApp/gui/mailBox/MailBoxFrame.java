@@ -2,9 +2,9 @@ package webMailApp.gui.mailBox;
 
 import webMailApp.dao.LetterDAO;
 import webMailApp.dao.UserDAO;
-import webMailApp.dao.dto.FolderDTO;
-import webMailApp.dao.dto.LetterDTO;
-import webMailApp.dao.dto.UserDTO;
+import webMailApp.dto.FolderDTO;
+import webMailApp.dto.LetterDTO;
+import webMailApp.dto.UserDTO;
 
 import javax.swing.*;
 import javax.swing.Timer;
@@ -17,11 +17,8 @@ import java.util.*;
 import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
- * User: maru
- * Date: 12.02.13
- * Time: 22:34
- * To change this template use File | Settings | File Templates.
+ * @author Mariia Gribova
+ * @version 1.0
  */
 
 

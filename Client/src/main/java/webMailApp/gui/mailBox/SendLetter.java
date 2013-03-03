@@ -10,12 +10,10 @@ import java.awt.event.ActionListener;
 import java.util.Date;
 
 /**
- * Created with IntelliJ IDEA.
- * User: maru
- * Date: 16.02.13
- * Time: 22:54
- * To change this template use File | Settings | File Templates.
+ * @author Mariia Gribova
+ * @version 1.0
  */
+
 public class SendLetter extends JFrame {
   private JButton sendButton;
   private JLabel letterToLabel;
@@ -88,17 +86,19 @@ public class SendLetter extends JFrame {
               String letterTheme = letterThemeText.getText().toString();
               String letterBody = letterBodyText.getText().toString();
 
-              String s = new LetterDAO().sendLetter(letterFrom, letterTo, letterTheme, new Date(), letterBody);
+              if (letterTo.equals("")) {
+                  JOptionPane.showMessageDialog(getFrame(), "Enter the recipient!");
+              } else {
+                  String s = new LetterDAO().sendLetter(letterFrom, letterTo, letterTheme, new Date(), letterBody);
 
-               if (s.equals("No such to")) {
-                   JOptionPane.showMessageDialog(getFrame(), "No such recipient!");
-               } else if (s.equals("Fail")) {
+                  if (s.equals("No such to")) {
+                      JOptionPane.showMessageDialog(getFrame(), "No such recipient!");
+                  } else if (s.equals("Fail")) {
 
-               } else if (s.equals("OK")) {
-                   getFrame().setVisible(false);
-               }
-
-
+                  } else if (s.equals("OK")) {
+                      getFrame().setVisible(false);
+                  }
+              }
           }
       });
 

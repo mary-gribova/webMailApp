@@ -2,8 +2,8 @@ package webMailApp.dao;
 
 import webMailApp.ProjectConstants;
 import webMailApp.Requests;
-import webMailApp.dao.dto.FolderDTO;
-import webMailApp.dao.dto.LetterDTO;
+import webMailApp.dto.FolderDTO;
+import webMailApp.dto.LetterDTO;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -13,14 +13,26 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+
 /**
- * Created with IntelliJ IDEA.
- * User: maru
- * Date: 23.02.13
- * Time: 17:59
- * To change this template use File | Settings | File Templates.
+ * @author Mariia Gribova
+ * @version 1.0
+ *
+ * Class for operations with letters (communication with server),
+ * such as sending letters, deleting letters and getting recieved letters
  */
+
 public class LetterDAO {
+    /**
+     *
+     * @param letterFrom email address of sender
+     * @param letterTo email address of recipient
+     * @param letterTheme letter's theme
+     * @param letterDate letter's sending date
+     * @param letterBody letter's body
+     * @return "OK" - if the letter successfully sended, "Fail" - if there is some exception,
+     *  "No such to" - if there is no such recepient
+     */
     public String sendLetter(String letterFrom, String letterTo,
                               String letterTheme, Date letterDate, String letterBody) {
 
@@ -69,6 +81,11 @@ public class LetterDAO {
         return "Fail";
     }
 
+    /**
+     *
+     * @param addressName email address of user
+     * @return list of folders with list of received letters in each
+     */
     public List<FolderDTO> getRecievedLetters(String addressName) {
         List<FolderDTO> folders = null;
 
@@ -120,6 +137,11 @@ public class LetterDAO {
         return folders;
     }
 
+    /**
+     *
+     * @param letters list of letters to delete
+     * @return true if success, false if there is some exception
+     */
     public boolean delLetters(List<LetterDTO> letters) {
         boolean retState = false;
 

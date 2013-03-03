@@ -5,6 +5,7 @@
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/newModule" />
+    <file type="web" url="file://$PROJECT_DIR$/Server" />
   </component>
   <component name="IdProvider" IDEtalkID="7DE52C3A61D93D3B8DDA75D34320BCFF" />
   <component name="MavenProjectsManager">
